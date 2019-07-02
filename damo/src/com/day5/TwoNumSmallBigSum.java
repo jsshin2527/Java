@@ -27,14 +27,12 @@ public class TwoNumSmallBigSum {
 		}else {
 			min = num2;
 		}
-		
-		System.out.println("두수중 큰숫자는"+max+"입니다.");
-		System.out.println("두수중 작은숫자는"+min+"입니다.");		
+		System.out.println("두수중 큰숫자는 "+max+"  입니다.");
+		System.out.println("두수중 작은숫자는 "+min+" 입니다.");		
 		
 		for(int i = min ; i<=max ; i++) {
 			sum += i;
 		}
-		
 		System.out.printf("%d 와 %d의 사이의 숫자들의 합은 : %d 입니다",min,max,sum);
 	}
 
