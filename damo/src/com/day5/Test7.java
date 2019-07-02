@@ -33,10 +33,14 @@ public class Test7 {
 		nalsu = (y-1)*365+(y-1)/4 - (y-1)/100 + (y-1)/400;
 		
 		int year = (y-1)/4 - (y-1)/100 + (y-1)/400;
-		System.out.println(nalsu);
-		System.out.println(year);
+		//System.out.println(nalsu);
+		//System.out.println(year);
 		
-		
+		//index : { 0  1 2 3 4 5 6 7 8 9 10 11 12 }
+		//nalsu : {31 28,31,30,31,30,31,31,30,31,30,31}
+		for(i=0;i<m-1;i++) {
+			
+		}
 
 	}
 
