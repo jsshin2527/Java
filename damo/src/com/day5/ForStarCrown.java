@@ -1,11 +1,10 @@
+//이중 For문을 활용하여 왕관 모양의 별찍기 프로그램 
+
 package com.day5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-//왕관 별찍기 
-
 
 public class ForStarCrown {
 
