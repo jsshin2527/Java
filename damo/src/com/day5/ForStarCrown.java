@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 //¿Õ°ü º°Âï±â 
 
 
-public class CrownTest {
+public class ForStarCrown {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
