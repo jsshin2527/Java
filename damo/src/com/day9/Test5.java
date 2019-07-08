@@ -23,6 +23,16 @@ public class Test5 {
 	
 		return b>=1 ? a*pow(a,b-1) : 1;
 	}
+	
+	//비정형 인수  ( 졍형화 되지 않는 인수 -> 인수의 값을 내가 조절하여서 넣을수 있다)
+	int sum1(int...args) {
+		int s = 0;
+		
+		for (int n : args) {
+			s+=n;
+		}
+		return s;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -33,8 +43,17 @@ public class Test5 {
 		int s = ob.sum(10);
 		System.out.println(s);
 		System.out.println("======================");
-		System.out.println("pow(2,31) : "+ob.pow(2, 31));
+		System.out.println("pow(2,31) -1 : "+(ob.pow(2, 31)-1));
 		//2^31은 int 형의 범위에 담지를 못한다 . 
+		
+		System.out.println();
+		
+		int result;
+		result = ob.sum1(2,4,6,8,10);
+		System.out.println("result : "+ result);
+		
+		result = ob.sum1(2,4,6,8,10,2,5,2,7,8,3,8,4,20,60);
+		System.out.println("result : "+ result);
 		
 	}
 

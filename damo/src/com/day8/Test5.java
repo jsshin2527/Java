@@ -17,9 +17,6 @@ public class Test5 {
 		
 		Calendar now = Calendar.getInstance(); //시스템의 날자를 저장하고있는 static 변수
 											   // 이미 메모리상에 올려저 있다 
-		
-		
-
 	}
 
 }

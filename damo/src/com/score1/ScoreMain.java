@@ -10,8 +10,5 @@ public class ScoreMain {
 		ob.input();
 		//ob.ranking();
 		ob.print();
-		
-
 	}
-
 }
