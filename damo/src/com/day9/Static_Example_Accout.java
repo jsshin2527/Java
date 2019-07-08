@@ -1,6 +1,6 @@
 package com.day9;
 
-public class StaticAccout {
+public class Static_Example_Accout {
 	
 	private String name;
 	private int amount;
@@ -16,7 +16,7 @@ public class StaticAccout {
 		5.코딩의 맨 첫줄에서만 호출 가능 (두번째 줄에서는 호출 불가) -> 상속의 개념 
 		6.메소드로 초기화 하는것보다 생성자로 초기화 하는것이 한발 더 빠르고 코드의 가독성이 좋아진다 
 */
-	public StaticAccout(String name,int amount) {
+	public Static_Example_Accout(String name,int amount) {
 		this.name = name;
 		this.amount = amount;
 		this.iyul = iyul;
@@ -28,8 +28,8 @@ public class StaticAccout {
 	
 	public static void main(String[] args) {
 	
-		StaticAccout.iyul = 0.7f;
-		StaticAccout p1 = new StaticAccout("AAA",10000);
+		Static_Example_Accout.iyul = 0.7f;
+		Static_Example_Accout p1 = new Static_Example_Accout("AAA",10000);
 		
 		p1.disp();	
 		System.out.println();
@@ -37,15 +37,15 @@ public class StaticAccout {
 		//5년뒤 BBB 신설 
 		//StaticAccout p2  = new StaticAccout("BBB",20000,0.05f);
 		//p1 = new StaticAccout("AAA",10000,0.05f);
-		StaticAccout.iyul = 0.5f;
+		Static_Example_Accout.iyul = 0.5f;
 		
-		StaticAccout p2 = new StaticAccout("BBB",10000);
+		Static_Example_Accout p2 = new Static_Example_Accout("BBB",10000);
 		
 		p1.disp();
 		p2.disp();
 		System.out.println();
 		
-		StaticAccout.iyul = 0.3f;
+		Static_Example_Accout.iyul = 0.3f;
 		//p1 = new StaticAccout("AAA", 10000, 0.03f);
 		//p2 = new StaticAccout("BBB", 10000, 0.03f);
 		p1.disp();

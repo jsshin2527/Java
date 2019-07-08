@@ -48,8 +48,6 @@ public class MaxMinSerach {
 			}if(min>num5) {
 				min = num5;
 			}
-			
-			
 			System.out.printf("%d %d %d %d %d",num1,num2,num3,num4,num5);
 	*/		System.out.println("큰 숫자? " + max);
 			System.out.println("작은 숫자? " + min);
