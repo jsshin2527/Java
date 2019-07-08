@@ -2,7 +2,7 @@ package com.day6;
 
 import java.util.Scanner;
 
-public class Selection_Sort_Example {
+public class Selection_Sort_Example1 {
 	
 	public static void main(String[] args) {
 		
