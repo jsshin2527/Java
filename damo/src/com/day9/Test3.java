@@ -47,6 +47,7 @@ public class Test3 {
 		ob.print(a , l);
 		
 		RectA ob1 = new RectA(100,200);
+		
 		a = ob1.area();
 		l = ob1.length();
 		ob1.print(a);
@@ -57,7 +58,5 @@ public class Test3 {
 		l = ob1.length();
 		ob1.print(a);
 		ob1.print(a, l);
-		
 	}
-
 }
