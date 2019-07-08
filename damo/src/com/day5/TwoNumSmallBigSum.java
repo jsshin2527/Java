@@ -16,7 +16,6 @@ public class TwoNumSmallBigSum {
 		num2 = sc.nextInt();
 		
 		if(num1>num2) {
-			
 			max = num1;
 		}else {
 			max = num2;
