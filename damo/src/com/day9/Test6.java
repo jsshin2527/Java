@@ -1,9 +1,11 @@
 package com.day9;
 
 import java.io.IOException;
+
 import java.util.Scanner;
 
 //boolean 활용 방법 
+
 class Calc{
 	//기본 생성자가 있다고 생각하고 코딩 
 	
@@ -21,6 +23,7 @@ class Calc{
 		System.out.print("\n연산자[+,-,*,/]를 입력하세요 ");
 		oper = (char)System.in.read();
 		//!= 가 두개이면 왜 && 이지 ? 
+		// 
 		if(oper != '+' && oper !='-' && oper != '/' && oper !='*') {
 			return false;
 		}
