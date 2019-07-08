@@ -2,7 +2,7 @@ package com.day6;
 
 import java.util.Scanner;
 
-public class Test8 {
+public class Rock_Paper_Scissors {
 	
 	public static void main(String[] args) {
 		
@@ -11,10 +11,7 @@ public class Test8 {
 		
 		int user;
 		int com;
-	
-		
 		Scanner sc = new Scanner(System.in);
-		
 		System.out.println("1:가위 2:바위 3:보 ?");
 		user = sc.nextInt();
 		while(true) {
@@ -29,22 +26,11 @@ public class Test8 {
 		}
 		
 		com=(int)(Math.random() * 3) +1;
-		
 		if(com==user)
 		System.out.println("비겼습니다");		
-		
 		else if(com-user==1||com-user==-2)
-		System.out.println("당신이 이겼습니다");
-		
+		System.out.println("당신이 이겼습니다");	
 		else
 		System.out.println("당신이 졌습니다");
-		
-		
-
-		
-
 	}
-	
-	
-
 }

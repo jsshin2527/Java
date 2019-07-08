@@ -2,28 +2,22 @@ package com.day6;
 
 import java.util.Scanner;
 
-public class Test6 {
+public class MaxMinSerach {
 	
 	//	1. 5개의 정수를 입력받아 입력받은 수를 출력하고 입력받은 수중
 	//   가장 큰수와 적은수를 출력
 	
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		
+		Scanner sc = new Scanner(System.in);	
 		//배열로 줄여보자
-		
 		int[] num = new int[5];
 		int n,max,min;	
-		
 		max=0;		
 		min=Integer.MAX_VALUE;
 
 			System.out.print("5개의 정수?");
 			
 		/*	num[n] = sc.nextInt();
-		
-			
 			if(max<num1) {
 				max = num1;
 						
