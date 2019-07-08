@@ -37,6 +37,7 @@ public class OverloadingExample2 {
 		// TODO Auto-generated method stub
 		
 		RectA ob = new RectA(); 
+		
 		ob.set(10,20);
 		
 		int a = ob.area();
