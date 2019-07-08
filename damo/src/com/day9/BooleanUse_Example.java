@@ -44,7 +44,7 @@ class Calc{
 	}
 }
 
-public class Test6 {
+public class BooleanUse_Example {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub

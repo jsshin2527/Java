@@ -20,7 +20,7 @@ class Test{
 	
 }
 
-public class Test7 {
+public class Call_by_Value_Call_by_Reference {
 	
 	public static void main(String[] args) {
 		

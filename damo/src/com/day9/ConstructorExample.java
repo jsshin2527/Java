@@ -1,6 +1,3 @@
-package com.day9;
-import java.util.Scanner;
-
 /*생성자  = 생성된 객체에 메모리를 할당하면서 변수를 초기화 하는 역활 담당 
 1.메모리 할당 
 2.변수 초기화 목적 
@@ -26,13 +23,17 @@ wiki -> property
 
 */ 
 
-public class Test2 {
+package com.day9;
+
+import java.util.Scanner;
+
+public class ConstructorExample {
 
 	//직접적으로 접근 불가 
 	private int x;
 	
 	//기본 생성자는 숨겨져있다 
-	public Test2() { //기본 생성자  -> 안써도 가능하다 다만 생성자를 오버로딩을 한다면 해당 클래스를 사용할때 생각을 해야한다. 
+	public ConstructorExample() { //기본 생성자  -> 안써도 가능하다 다만 생성자를 오버로딩을 한다면 해당 클래스를 사용할때 생각을 해야한다. 
 		
 		//기본 생성자에서 오버로드된 생성자를 호출을 하려면 this 를 사용해야합니다. 
 		this(100);
@@ -40,7 +41,7 @@ public class Test2 {
 		x = 10;	
 		System.out.println("x = " + x);
 	}
-	public Test2(int x) { //오버로딩이 된 생성자 
+	public ConstructorExample(int x) { //오버로딩이 된 생성자 
 		//this();
 		System.out.println("오버로딩이 된 생성자 ");
 		this.x = x;
@@ -54,8 +55,8 @@ public class Test2 {
 	public static void main(String[] args) {
 	
 		
-		Test2 ob = new Test2();
-		Test2 ob1 = new Test2(100);
+		ConstructorExample ob = new ConstructorExample();
+		ConstructorExample ob1 = new ConstructorExample(100);
 		
 		//Scanner 는 기본 생성자를 명시하지 않은 클래스 이다 . API에 명시된 파리미터를 명시해야 Scanner 클래스를 사용할수 있습니다.  
 		Scanner sc = new Scanner(System.in);

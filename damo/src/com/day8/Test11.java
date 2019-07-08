@@ -1,6 +1,6 @@
 package com.day8;
 
-import com.day9.Test2;
+import com.day9.ConstructorExample;
 
 public class Test11 {
 	

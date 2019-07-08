@@ -31,8 +31,7 @@ class RectA{
 		System.out.println("ตัทน : "+l);
 	}
 }
-
-public class Test3 {
+public class OverloadingExample2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -44,7 +43,7 @@ public class Test3 {
 		int l = ob.length();
 		
 		ob.print(a);
-		ob.print(a , l);
+		ob.print(a,l);
 		
 		RectA ob1 = new RectA(100,200);
 		

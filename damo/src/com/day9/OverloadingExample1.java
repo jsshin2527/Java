@@ -10,13 +10,13 @@ class Rect{
 	
 	//각 변수가 어디에 속하는 변수인지 색깔로 확인 
 	public void set(int w,int h) {
-		this.w = w;
-		this.h=  h;	
+		this.w =  w;
+		this.h =  h;	
 	}	
-	public int area() {
+	public int area(){
 		return w*h;
 	}
-	public int length() {
+	public int length(){
 		return (w+h)*2;
 	}
 	
@@ -47,15 +47,12 @@ class Rect{
 		
 	}
 	*/
-
 	public void getPrint(int a, int l) {
 		System.out.println("가로 : " + w);
 		System.out.println("세로 : " + h);
 		System.out.println("넓이 : " +length());
 		System.out.println("둘레 : " + area());
-
-	}
-	
+	}	
 	//가로세로만 출력하게 
 	public void getPrint() {
 		System.out.println("가로 : " + w);
@@ -81,7 +78,7 @@ class Rect{
 //*같은 클래스 안에서* 같은 역활을 하는 메소드의 이름을 통일시키는 작업 : 메소드 오버 로딩(overloading) vs override( *다른 클래스 에서*) 
 //자바는 이름은 통일시키고 매개변수의 갯수가 다르거나 데이터 타입이 다르면 다른 메소드로 인식하다 
 
-public class Test1 {
+public class OverloadingExample1 {
 
 	public static void main(String[] args) {
 		Rect ob = new Rect();
