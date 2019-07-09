@@ -1,16 +1,13 @@
-package com.day;
 /*
-	2019.06.28 세번째 코드 
-	
+ 	System.in을 입력받아 대문자 이면 소문자로 소문자 이면 대문자로 변환하는 프로그램 
 	매우 중요
-
 	소문자를 -> 대문자로 
-
 	대문자를 -> 소문자로 
-
 	변환하는 프로그램 
 	
 */
+
+package com.day;
 
 import java.io.IOException;
 
@@ -18,7 +15,7 @@ import java.io.InputStreamReader;
 
 import java.io.BufferedReader;
 
-class Test9 
+class Capital_Small__Letter_Change 
 
 {
 	public static void main(String[] args) throws IOException
@@ -28,8 +25,8 @@ class Test9
 		char ch,result;
 		System.out.print("한개의 문자를 입력하세요 : " ); //abcd
 		ch = (char)System.in.read(); //System.in은 오로지 하나의 문자만 읽어드린다 a(97) a를 입력하면 
-									 
-									 //97이라는 정수가 들어가있다 명시적 형 변환  
+	    
+		//97이라는 정수가 들어가있다 명시적 형 변환  
 		int i = System.in.read();
 		int j = System.in.read();
 					

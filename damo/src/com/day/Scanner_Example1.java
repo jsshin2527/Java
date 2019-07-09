@@ -7,13 +7,9 @@ package com.day;
 import java.util.*;
 
 //Scanner 
-
 //단락문자의 패턴을 사용해서 데이터를 분류 
-
 //기본 패턴 : 공백 
-
-class Test12 
-
+class Scanner_Example1 
 {
 	public static void main(String[] args) 
 	

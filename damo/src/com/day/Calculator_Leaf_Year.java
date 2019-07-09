@@ -1,12 +1,12 @@
-package com.day;
 /*
-	2019.06.28 두번째 코드 
-	
+ 	BufferedReader 클래스를 이용하여 2개의 숫자를 입력받아 계산기 프로그램과 윤년을 계산하는 프로그램 
+
 	java.lang 이라는 것은 사용빈도수가 높은 클래스들이 이미 메모리 상에 올라가 있다 
 
 	따라서 따로 import를 하지않아도 사용할수 있다.
 	
 */
+package com.day;
 
 import java.io.BufferedReader;
 
@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 
 import java.io.IOException;
 
-class Test8 
+class Calculator_Leaf_Year 
 
 {
 	public static void main(String[] args) throws IOException

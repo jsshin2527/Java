@@ -29,7 +29,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader; 
 import java.io.IOException; //3개의 패키지를 import 로 불러온다 
 
-class Test4 
+class JavaDataType2 
 {
 	public static void main (String[] args) throws IOException 
 	{

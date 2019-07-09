@@ -26,7 +26,7 @@ import java.io.InputStreamReader;
 
 import java.io.IOException;
 
-class Test10 
+class If_Example 
 
 {
 	public static void main(String[] args) throws IOException
@@ -40,39 +40,24 @@ class Test10
 		/*if (Á¶°Ç){
 		  ÀÛ¾÷ 
 		 }
-
 		*/
-		
 		/*
-
 		if (num%2==0)
-		
 		{
 			str = "Â¦¼ö";
-			
 			str = str + "ÀÔ´Ï´Ù.";
 		}
-
 		if (num%2!=0)
-		
 			str = "È¦¼ö";	
-		
 		System.out.println(num+":"+str);
-		
 		*/
-
 		//if~else 
-
 		if (num%2==0)
 		{
 			str = "Â¦¼ö";
-		
 		}else{
-		
 			str = "È¦¼ö";
 		}
 		System.out.println(num+":"+str);
-
 	}
-
 }

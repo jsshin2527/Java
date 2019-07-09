@@ -7,14 +7,10 @@
 */
 package com.day;
 import java.util.Scanner;
-
-class Test11 
-
+class If_else_Example 
 {
 	public static void main(String[] args) 
-	
 	{
-	
 		Scanner sc = new Scanner(System.in);
 		String name; 
 		int kor;
@@ -26,19 +22,13 @@ class Test11
 		if (kor>=90)
 		{
 			pan = "수";
-		
 		}else if (kor>=80)
-		
 		{
 			pan = "우";
-		
 		}else if (kor >=70)
-		
 		{
 			pan = "미";
-		
 		}else if (kor >=60)
-		
 		{
 			pan = "양";
 		
@@ -47,5 +37,4 @@ class Test11
 		}
 		System.out.println(name+":"+pan);
 	}
-
 }

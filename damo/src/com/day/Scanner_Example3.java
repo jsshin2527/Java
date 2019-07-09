@@ -12,13 +12,10 @@ import java.io.InputStreamReader;
 
 import java.io.IOException;
 
-class Test5  
-
+class Scanner_Example3  
 {
 	public static void main (String[] args) throws IOException
-	
 	//이거 에러가 날수가 있어 ( 예외 처리)
-	
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String name; //초기화를 하지 않을 경우 null 값이 들어 있습니다.
@@ -36,10 +33,10 @@ class Test5
 		String a = name+"방가방가~~";
 		System.out.println(name+"의 국어 점수는 "+kor+" 입니다.");
 		System.out.println(a);
-		System.out.println(name+"의 영어 점수는 "+eng+" 입니다.");
-		System.out.println(name+"의 수학 점수는 "+math+" 입니다.");
-		System.out.println(name+"의 총 점수는 "+tot+" 입니다.");
-		System.out.println(name+"의 평준 점수는 "+average+ "입니다.");
+		System.out.println(name+"의 영어 점수는 "+eng+"입니다.");
+		System.out.println(name+"의 수학 점수는 "+math+"입니다.");
+		System.out.println(name+"의 총   점수는 "+tot+"입니다.");
+		System.out.println(name+"의 평준 점수는 "+average+"입니다.");
 
 	}
 }

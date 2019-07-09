@@ -1,7 +1,4 @@
-package com.day;
 /*
-
-2019-06-28 첫번째 코드 
 
 1. float 와 double 의 차이를 알아보는 코드 
 2. 밑변과 높이를 입력받아 삼각형의 면적 구하기 
@@ -9,13 +6,16 @@ package com.day;
 높이 : 20
 면적 : 밑변 * 높이 /2
 */
+
+package com.day;
+
 import java.io.BufferedReader;
 
 import java.io.InputStreamReader; 
 
 import java.io.IOException;
 
-class Test7 
+class Triangle_Length_Area 
 
 {
 	public static void main(String[] args) throws IOException

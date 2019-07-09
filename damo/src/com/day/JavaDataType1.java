@@ -12,7 +12,7 @@ int 자료형 : 정수 값만 저장
 
 */
 
-class JavaDataType 
+class JavaDataType1 
 
 {
 	public static void main(String[] args) 

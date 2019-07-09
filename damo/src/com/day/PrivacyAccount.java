@@ -23,7 +23,7 @@ import java.io.InputStreamReader;
 
 import java.io.IOException;
 
-class Test6 
+class PrivacyAccount 
 {
 	public static void main(String[] args) throws IOException
 	{
