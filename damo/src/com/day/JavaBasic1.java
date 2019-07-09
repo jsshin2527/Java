@@ -45,7 +45,7 @@ java classfile -> 자바 클래스 파일 실행
 
 package com.day;
 
-class Test1 
+class JavaBasic1 
 
 {
 	public static void main(String[] args) 

@@ -19,7 +19,6 @@ class Rect{
 	public int length(){
 		return (w+h)*2;
 	}
-	
 	/*
 	public void getPrint(int a, int l) {
 		System.out.println("가로 : " + w);
@@ -45,8 +44,7 @@ class Rect{
 		System.out.println("세로 : " + h);
 		System.out.println("둘레 : " + area());
 		
-	}
-	*/
+	}*/
 	public void getPrint(int a, int l) {
 		System.out.println("가로 : " + w);
 		System.out.println("세로 : " + h);

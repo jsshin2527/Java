@@ -10,7 +10,7 @@ customInfo -- 권장
 custom_Info 
 float 실수를 저장할수 있는 자료형 
 */
-class Test3 
+class Class_Method_NameDefine 
 {
 	public static void main(String[] args) 
 	{

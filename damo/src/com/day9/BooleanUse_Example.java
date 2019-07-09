@@ -32,10 +32,12 @@ class Calc{
 	public int result() {
 		int r = 0;
 		switch(oper) {
+		
 		case '+' : r=num1+num2;break;
 		case '-' : r=num1-num2;break;
 		case '*' : r=num1*num2;break;
 		case '/' : r=num1/num2;break;	
+		
 		}
 		return r;
 	}

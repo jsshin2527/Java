@@ -11,7 +11,7 @@ package com.day9;
  * 
  */
 
-public class ClassReset_instacneReset {
+public class ClassInitialize_instacneInitialize {
 	
 	int a = 5;
 	
@@ -29,7 +29,7 @@ public class ClassReset_instacneReset {
 	
 	final int C ; //상수
 	
-	public ClassReset_instacneReset () {
+	public ClassInitialize_instacneInitialize () {
 		System.out.println("생성자 ....");
 		C = 100;
 		System.out.println("C :" +C);
@@ -44,8 +44,8 @@ public class ClassReset_instacneReset {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ClassReset_instacneReset ob = new ClassReset_instacneReset();
-		ClassReset_instacneReset ob1 = new ClassReset_instacneReset();
+		ClassInitialize_instacneInitialize ob = new ClassInitialize_instacneInitialize();
+		ClassInitialize_instacneInitialize ob1 = new ClassInitialize_instacneInitialize();
 		
 	}
 

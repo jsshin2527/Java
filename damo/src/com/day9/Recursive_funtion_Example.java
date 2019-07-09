@@ -5,7 +5,7 @@ package com.day9;
 //처리 속도는 느림 
 //stack 영억에 저장을 합니다. 
 
-public class Recursive_funtionExample {
+public class Recursive_funtion_Example {
 
 	public void print(int n) {
 		
@@ -36,7 +36,7 @@ public class Recursive_funtionExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Recursive_funtionExample ob = new Recursive_funtionExample();
+		Recursive_funtion_Example ob = new Recursive_funtion_Example();
 		
 		ob.print(5);
 		System.out.println("\n====================");

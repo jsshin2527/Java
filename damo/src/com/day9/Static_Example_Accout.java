@@ -28,6 +28,7 @@ public class Static_Example_Accout {
 	
 	public static void main(String[] args) {
 	
+		//AAA ½Å¼³ 
 		Static_Example_Accout.iyul = 0.7f;
 		Static_Example_Accout p1 = new Static_Example_Accout("AAA",10000);
 		
@@ -38,9 +39,7 @@ public class Static_Example_Accout {
 		//StaticAccout p2  = new StaticAccout("BBB",20000,0.05f);
 		//p1 = new StaticAccout("AAA",10000,0.05f);
 		Static_Example_Accout.iyul = 0.5f;
-		
 		Static_Example_Accout p2 = new Static_Example_Accout("BBB",10000);
-		
 		p1.disp();
 		p2.disp();
 		System.out.println();

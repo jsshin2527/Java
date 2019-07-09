@@ -33,7 +33,7 @@ public class ConstructorExample {
 	private int x;
 	
 	//기본 생성자는 숨겨져있다 
-	public ConstructorExample() { //기본 생성자  -> 안써도 가능하다 다만 생성자를 오버로딩을 한다면 해당 클래스를 사용할때 생각을 해야한다. 
+	public  ConstructorExample() { //기본 생성자  -> 안써도 가능하다 다만 생성자를 오버로딩을 한다면 해당 클래스를 사용할때 생각을 해야한다. 
 		
 		//기본 생성자에서 오버로드된 생성자를 호출을 하려면 this 를 사용해야합니다. 
 		this(100);
