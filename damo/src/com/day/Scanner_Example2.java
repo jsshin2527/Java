@@ -20,7 +20,6 @@ class Scanner_Example2
 	{
 		//입력값을 받기위한 변수를 선언 
 		/*
-
 		String test1input;
 		int test2input;
 	    BufferedReader test = new BufferedReader (new InputStreamReader(System.in));

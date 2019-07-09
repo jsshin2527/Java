@@ -14,12 +14,10 @@ class Test{
 	public int x = 10;
 	
 	public void sub(int a) {
-	
 		x += a;
 	}
 	
 }
-
 public class Call_by_Value_Call_by_Reference {
 	
 	public static void main(String[] args) {
@@ -39,11 +37,17 @@ public class Call_by_Value_Call_by_Reference {
 		j = i;
 		//stack 영역의 자료형은 값이 그대로 넘어간다 
 		
+		//reference type 
+		
 		Test ob1; //class는 정의만 해두면 null 이 들어가있습니다. 
 		
 		ob1 = ob; 
 		
 		ob.x =200;
+		System.out.println(ob.x);
+		System.out.println(ob1.x);
+		
+		ob.x =300;
 		System.out.println(ob.x);
 		System.out.println(ob1.x);
 		

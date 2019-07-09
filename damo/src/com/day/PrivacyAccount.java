@@ -16,6 +16,13 @@ Tip 코딩을 할때에는 들여쓰기를 해야한다
 회원명,성명,나이,사는곳 변수 값을 출력해야 한다. 
 
 */
+// 입력 값을 받기위해 BufferedReader 클레스에서 member라는 인스턴스(객체를) 생성 합니다.
+// 변수명 
+// name    : 회원 이름 
+// sex     : 성별 
+// address : 주소 
+// age     : 나이 
+// email   : 이메일 주소
 
 import java.io.BufferedReader;
 
@@ -27,13 +34,7 @@ class PrivacyAccount
 {
 	public static void main(String[] args) throws IOException
 	{
-	// 입력 값을 받기위해 BufferedReader 클레스에서 member라는 인스턴스(객체를) 생성 합니다.
-	// 변수명 
-	// name    : 회원 이름 
-	// sex     : 성별 
-	// address : 주소 
-	// age     : 나이 
-	// email   : 이메일 주소
+
 	String membername,memberaddress,membersex,memberemail;
 	int memberage;
 	BufferedReader member = new BufferedReader (new InputStreamReader(System.in));

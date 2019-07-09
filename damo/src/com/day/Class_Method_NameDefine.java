@@ -1,6 +1,4 @@
-package com.day;
 /*
- 2019.06.37 세번째 코드 
 Class의 이름은  반드시 첫 글자가 대문자 이여야 합니다. 
 Custom 두번째 단어의 첫글자는 대문자로 설정해야합니다. 
 CustomInfo = Custom+Info 
@@ -10,6 +8,8 @@ customInfo -- 권장
 custom_Info 
 float 실수를 저장할수 있는 자료형 
 */
+package com.day;
+
 class Class_Method_NameDefine 
 {
 	public static void main(String[] args) 

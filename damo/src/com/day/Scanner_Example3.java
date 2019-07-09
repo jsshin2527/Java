@@ -1,10 +1,11 @@
-package com.day;
 /* 
 2019.06.27 다섯번째 코딩 
 
 java에서 문자를 저장하는 자료형 String 
 
+Scanner 클래스를 이용하여 국어 영어 수학 점수를 입력받아 각각의 점수와 함께 총점과 평균점수를 출력하는 프로그램 
 */
+package com.day;
 
 import java.io.BufferedReader;
 
@@ -15,7 +16,7 @@ import java.io.IOException;
 class Scanner_Example3  
 {
 	public static void main (String[] args) throws IOException
-	//이거 에러가 날수가 있어 ( 예외 처리)
+	//이거 에러가 날수가 있어 (try~catch 예외 처리)
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String name; //초기화를 하지 않을 경우 null 값이 들어 있습니다.
@@ -37,6 +38,5 @@ class Scanner_Example3
 		System.out.println(name+"의 수학 점수는 "+math+"입니다.");
 		System.out.println(name+"의 총   점수는 "+tot+"입니다.");
 		System.out.println(name+"의 평준 점수는 "+average+"입니다.");
-
 	}
 }
