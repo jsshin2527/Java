@@ -1,29 +1,18 @@
-package com.day;
 /* 
-
-2019.06.27 네번째 코드 
+자에의 데이터 유형을 알아보는 프로그램입니다. 반지름을 입력받아 원의 면적과 둘레를 출력하는 프로그램입니다. 
 
 매우 중요 
-
-해당 클래스 의미 중요 
-
+해당 클래스 의미 중요
 Scanner 와 BufferedReader 의 차이를 알아야한다 
-
 System.in은 키보드와 같은 사용자로 부터 입력을 받는 표준 입력스트림 객체를 나타냅니다. 
-
 그리고 리턴 값은 InputStream 입니다.
-
 키보드로 입력한 한개의 문자(1byte)의 문자 한개를 읽어 온다 
-
 15.4를 입력하면 1->5->.4 순으로 읽어 온다 
-
 InputStreamReader : 키보드로 입력한 1byte를 문자로 변환 (브릿지 클래스) 
-
 BufferedReader :버퍼를 만들고 데이터를 보관 
 
-
-
 */
+package com.day;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader; 

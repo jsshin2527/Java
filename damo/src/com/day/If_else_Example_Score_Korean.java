@@ -1,10 +1,11 @@
 /*
 	제어문 if 관련 예제 
+	
 	국어 점수를 입력을 받아 수우미양가 점수를 표시하는 프로그램 
 */
 package com.day;
 import java.util.Scanner;
-class If_else_Example 
+class If_else_Example_Score_Korean 
 {
 	public static void main(String[] args) 
 	{

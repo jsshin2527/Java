@@ -1,13 +1,13 @@
 /* 
-Scanner 
-단락문자의 패턴을 사용해서 데이터를 분류 
-기본 패턴 : 공백 
-Scanner를 활용하여 이름 국어 영어 수학 입력값을 받은후 이름과 평균을 구하는 프로그램 
+	Scanner 
+	단락문자의 패턴을 사용해서 데이터를 분류 
+	기본 패턴 : 공백 
+	Scanner를 활용하여 이름 국어 영어 수학 입력값을 받은후 이름과 평균을 구하는 프로그램 
 */
 package com.day;
 import java.util.*;
 
-class Scanner_Example1 
+class Scanner_Example1_ScoreAverage 
 {
 	public static void main(String[] args) 
 	

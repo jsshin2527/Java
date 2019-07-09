@@ -1,9 +1,7 @@
 /* 
-2019.06.27 다섯번째 코딩 
-
-java에서 문자를 저장하는 자료형 String 
-
-Scanner 클래스를 이용하여 국어 영어 수학 점수를 입력받아 각각의 점수와 함께 총점과 평균점수를 출력하는 프로그램 
+	java에서 문자를 저장하는 자료형 String 
+	
+	Scanner 클래스를 이용하여 국어 영어 수학 점수를 입력받아 각각의 점수와 함께 총점과 평균점수를 출력하는 프로그램 
 */
 package com.day;
 
@@ -13,7 +11,7 @@ import java.io.InputStreamReader;
 
 import java.io.IOException;
 
-class Scanner_Example3  
+class Scanner_Example_ScoreAverage_ScoreTot  
 {
 	public static void main (String[] args) throws IOException
 	//이거 에러가 날수가 있어 (try~catch 예외 처리)

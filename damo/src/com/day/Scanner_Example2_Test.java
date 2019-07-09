@@ -1,19 +1,19 @@
-package com.day;
-/*
-	2019.06.28 테스트용 코드 
+/* 
+	테스트용 프로그램 
 		
 	1.BufferedReader 를 이용하여 입력값을받기 
 	
 	2.char 에 대한 개념 확인 
 
 */
+package com.day;
 
 import java.io.BufferedReader;
 
 import java.io.InputStreamReader;
 
 import java.io.IOException;
-class Scanner_Example2 
+class Scanner_Example2_Test 
 {
 	public static void main(String[] args) throws IOException
 	

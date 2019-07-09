@@ -1,10 +1,10 @@
 /*
+ 	BufferedReader 클래스를 이용하여 숫자를 입력받아 짝수 홀수 출력을 하는 프로그램 
 	제어문 
 	if   조건이 을때  
 	for  시작과 끝이 정해져 있는 경우 for 문을 사용하면 좋다 
 	while  몇번 돌려야 할지 모를때 사용 하면 좋다 
-	do~while 
-	
+	do~while 	
 	switch
 	{
 	작업이 하나일때는 중괄호 생략이 가능하다 }
@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 
 import java.io.IOException;
 
-class If_Example 
+class If_Example_Even_Odd 
 
 {
 	public static void main(String[] args) throws IOException
