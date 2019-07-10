@@ -10,32 +10,21 @@ class Hap{//클래스 안에 클래스를 만들때는 public을 없애준다
 	
 	public void input() {
 		
-		Scanner sc = new Scanner(System.in);
-		
+		Scanner sc = new Scanner(System.in);		
 		System.out.println("정수 입력?");
-		su = sc.nextInt();//su는 바깥의 int su;에 저장되어있다
-		
-	}
-	
-	public int cnt() {
-		
+		su = sc.nextInt();//su는 바깥의 int su;에 저장되어있다		
+	}	
+	public int cnt() {		
 		for(int i=1;i<=su;i++) {
 			sum +=i;//sum = sum+i 메소드 밖에 있는 인스턴스 변수는 자료형에 맞게 초기화 되어있다
-		}
-		
-		return sum;//바깥의 int sum;을 반환해줌
-		
-	}
-	
+		}		
+		return sum;//바깥의 int sum;을 반환해줌		
+	}	
 	public void print(int i) {
-		System.out.println("1~" + su + "까지의 합계" + i);
-		
+		System.out.println("1~" + su + "까지의 합계" + i);		
 	}
-	
 	
 }
-
-
 
 public class Test7 {
 
@@ -46,10 +35,7 @@ public class Test7 {
 		h.input();
 		int cnt = h.cnt();//cnt는 옆집에서 절대 알수가 없다
 		h.print(cnt);
-		
-		
 
 	}//메인절에서 분해해서 클래스로 만들었다
 	 //실제로 컴파일 하게되면 클래스는 별도로 만들어진다
-
 }

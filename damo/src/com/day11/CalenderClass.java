@@ -30,13 +30,19 @@ public abstract class CalenderClass {
 		System.out.printf("%tT\n",now);
 		// 월은 집어 넣으때는 -1 꺼널때는 +1
 		System.out.println("2020-10-10일 날짜 구하기");
-		now.set(2020,10-1,10);	
+		now.set(2015,2-1,20);	
 		y = now.get(Calendar.YEAR); //static final 
 		m = now.get(Calendar.MONTH)+1; //월 (0~11)
 		d = now.get(Calendar.DATE);  
 		w = now.get(Calendar.DAY_OF_WEEK); //주의수 (1~7= 일:1)
 		
 		System.out.println(y+"-"+m+"-"+d+"-"+week[w-1]+"요일");
-
+		
+		startDay = now.getActualMinimum(Calendar.DATE);
+		endDay = now.getActualMaximum(Calendar.DATE);
+		
+		System.out.println(startDay);
+		System.out.println(endDay);
+		
 	}
 }

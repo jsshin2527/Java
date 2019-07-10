@@ -52,12 +52,9 @@ class Calculator_Leaf_Year
 		//윤년 구하는 공식 
 		str = num1%4==0&&num1%100!=0 || num1%400==0? "윤년":"평년";
 		System.out.println("num1 에 있는 값은 : "+str);
-
 		// A and B(&&)
 		// A 도 true B 도 true
 		// A  or B(||)
 		// A가 true 이거나 B가 true 이면 (둘중 하나가 true이면) 
-
 	}
-
 }

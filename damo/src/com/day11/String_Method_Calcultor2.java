@@ -47,6 +47,7 @@ class Calc extends Input{
 	}
 	public int numberDivde1(String r,int num1){
 		comma = r.indexOf(",");
+		
 		if(comma > -1) {
 			num1 = Integer.parseInt(r.substring(0,comma));	
 		}
@@ -81,8 +82,6 @@ class Calc extends Input{
 		return result;
 	}	
 }
-
-
 public class String_Method_Calcultor2 {
 
 	public static void main(String[] args) throws IOException {
@@ -111,8 +110,6 @@ public class String_Method_Calcultor2 {
 		
 		System.out.printf("%d %c %d  = %d \n",num1,oper,num2,result);
 
-		
-		
 	}
 
 }
