@@ -1,8 +1,8 @@
+// 다섯개의 수를 입력 받아 중간값을 구하는 프로그램 
+// 장애 처리 파일 
 package com.day4;
 
 import java.util.Scanner;;
-
-// 다섯개의 수를 입력 받아 중간값을 구하는 프로그램 
 
 public class Midvalue {
 
@@ -25,19 +25,31 @@ public class Midvalue {
 		}
 		
 		//입력값 확인 
+		int temp;
 		System.out.println();
 		System.out.println("정렬을 시작하겠습니다.");
-		int max = 0;
+		
 		for(int i =0;i<5;i++){
-			for(int j =0;j<5-i;j++){
+			int max=0,index = 0;
+			for(int j=i;j<5;j++){
 				if( max < num[j]) {
-					num1[4-i] = num[j];
+					max = num[j];
+					index =j;
+			//	System.out.printf("\n index : %2d",index);
 				}
-			
-			}	
+				temp = num[i];
+				num[i] = num[index];
+				num[index] = temp;
+			System.out.printf("\n num[index] : %4d",num[index]);
+			}
+			System.out.println();
+			for (int j = 0; j < num1.length; j++) {
+				System.out.printf("%4d",num[j]);
+			}
+			System.out.println();	
 		}
 		for(int i=0;i<5;i++) {
-			System.out.printf("%4d",num1[i]);
+			System.out.printf("%4d",num[i]);
 		}
 	}
 

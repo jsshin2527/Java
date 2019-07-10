@@ -1,6 +1,6 @@
 package com.day5;
 
-import com.day4.Example1;
+import com.day4.Scanner_Odd_Even;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class Test5 {
 
 	public static void main(String[] args) throws IOException {
 		
-		Example1 ex1 = new Example1();
+		Scanner_Odd_Even ex1 = new Scanner_Odd_Even();
 		
 		
 		

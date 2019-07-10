@@ -1,12 +1,14 @@
-package com.day4;
 /*
- * 3. 네 개의 정수를 입력 받고, 제일 큰 숫자와 제일 작은 숫자를 구분해서 출력.(if문 이용)
+ 3. 네 개의 정수를 입력 받고, 제일 큰 숫자와 제일 작은 숫자를 구분해서 출력.(if문 이용)
 	예) 20, 30, 40, 50 입력시 -> 제일 큰 숫자 50, 제일 작은 숫자 20
- */
+*/
+
+package com.day4;
+
 
 import java.util.Scanner;
 
-public class Example3 {
+public class Scanner_Max_Min {
 
 	private static final int MAX_VALUE = 0;
 
@@ -19,7 +21,6 @@ public class Example3 {
 		
 		max = 0;
 		min = Integer.MAX_VALUE;
-		
 		/*
 		for(int i=0;i<4;i++) {
 			System.out.print("정수 "+(i+1)+"입력하세요 :");
@@ -28,7 +29,6 @@ public class Example3 {
 				max = num[i];
 			}
 		}
-		
 		for(int i=0;i<4;i++) {
 			if(min > num[i]) {
 				min = num[i];
@@ -39,9 +39,9 @@ public class Example3 {
 		*/
 		
 		//배열을 이용하지 않고 최댓값 최솟값 프로그램 작성하기 
-		System.out.println("=============================");
+		System.out.println("=========================================");
 		System.out.println("배열을 이용하지 않고 최댓값 최소값 구하기 \n");
-		System.out.println("=============================");
+		System.out.println("=========================================");
 		
 		
 		int num1,num2,num3,num4;

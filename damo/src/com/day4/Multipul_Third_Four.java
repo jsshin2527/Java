@@ -1,7 +1,3 @@
-package com.day4;
-
-import java.util.Scanner;
-
 /*
  * 논리
  * boolean  : 1 byte true/false
@@ -85,18 +81,19 @@ import java.util.Scanner;
  *   // 무한 루프 
  * ====================================================================================
  */
+package com.day4;
 
-public class Test1 {
+import java.util.Scanner;
+
+public class Multipul_Third_Four {
 
 	public static void main(String[] args) {
 	
 		Scanner sc = new Scanner(System.in);
 
 		int su = 10;
-		
 		//while의 경우는 조건이 만족하면 계속 돈다 
 		//만약 조건이 false로 된다면 while문을 빠져 나오게 됩니다.
-		
 		do {
 		System.out.print("수 입력 : ");
 		su = sc.nextInt();}while(su<0);

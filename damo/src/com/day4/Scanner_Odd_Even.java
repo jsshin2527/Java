@@ -1,7 +1,9 @@
+//Scanner클래스를 이용하여 입력받은 숫자가 홀수인지 짝수인지 판별하는 프로그램 입니다. 
 package com.day4;
+
 import java.util.Scanner;
 
-public class Example1 {
+public class Scanner_Odd_Even {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

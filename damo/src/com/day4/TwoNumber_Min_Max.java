@@ -1,13 +1,13 @@
-package com.day4;
-
 /*
  * 2.두 개의 정수를 입력 받고, 큰 숫자와 작은 숫자를 구분해서 출력.(if문 이용)
-예) 20, 30 입력시 -> 큰 숫자 30, 작은 숫자 20
+	 20, 30 입력시 -> 큰 숫자 30, 작은 숫자 20
 
  */
+package com.day4;
+
 import java.util.Scanner;
 
-public class Example2 {
+public class TwoNumber_Min_Max {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

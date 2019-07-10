@@ -1,13 +1,15 @@
-package com.day4;
 /*
-4. 년도를 입력받고, 윤년인지 아닌지를 출력.
-예) 2010 입력시 -> 2010 => 평년
+	Scanner를 이용하여 윤년을 구하는 프로그램 
+	4.년도를 입력받고, 윤년인지 아닌지를 출력.
+	예) 2010 입력시 -> 2010 => 평년
     2012 입력시 -> 2012 => 윤년
 */
 
+package com.day4;
+
 import java.util.Scanner;
 
-public class Example4 {
+public class Scanner_Leaf_Year {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
