@@ -21,7 +21,7 @@ public class ObjectClass_Example {
 		Super ob2 = new Super();
 		Super ob1 = new Super();
 		
-		System.out.println("ob1 == ob2 : " + (ob1==ob2)); //false 
+		System.out.println("ob1 == ob2 : " + (ob1==ob2)); //false 주소값이 다르기 때문 
 		System.out.println("ob1.equals(ob2) : "+ ob1.equals(ob2)); //false
 		/*
 		 * 모든 클래스의 부모는 Object입니다.

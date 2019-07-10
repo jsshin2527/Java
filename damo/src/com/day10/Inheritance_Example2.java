@@ -39,7 +39,7 @@ public class Inheritance_Example2 extends Inheritance_Super2{
 	int area = 20;
 	public Inheritance_Example2(int w,int h) {
 		
-		super("사각형"); //부모를 찾아가라  -> 생성자에는 기본적으로 super가 숨겨저 있습니다. 따리서 다음과 같이 코드를 작성하면 set의 값을 안받아도 출력이 가능합니다. 
+		super("사각형"); // super 부모를 찾아가라  -> 생성자에는 기본적으로 super가 숨겨저 있습니다. 따리서 다음과 같이 코드를 작성하면 set의 값을 안받아도 출력이 가능합니다. 
 		
 		this.w = w;
 		this.h = h;

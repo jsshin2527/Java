@@ -59,7 +59,7 @@ public class StringMemoryManagement {
 		//stringBuilderTime > stringBufferTime > stringTime
 		//하는일이 비슷한 일한데 다른 이름을 주오준다 
 		//동기화 비동기화 
-		//StingBuffer : 동기화 지원
+		//StingBuffer : 동기화 지원 -> 비동기화 보다 느림 
 		//StringBuilder : 동기화 지원 하지 않음
 	}
 

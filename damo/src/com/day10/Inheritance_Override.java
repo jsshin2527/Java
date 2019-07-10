@@ -2,6 +2,7 @@ package com.day10;
 
 //모든 클래스의 최고 상위 클래스는 Object클래스입니다. 
 class Shape{
+	
 	private String title;
 	protected double area;
 	public Shape() {}
@@ -16,6 +17,7 @@ class Circle extends Shape{
 	private int r;
 	protected static final double P1 = 3.14;
 	public Circle(int r) {
+		//Shape ob = new Shape("원"); -> super("원")
 		super("원");
 		this.r = r;
 	}
@@ -35,12 +37,24 @@ class Rect extends Shape{
 	/*
 	 * method OverRide : 부모가 가지고 있는 메소드가 자식 클래스에 똑같은 이름을 가지고 있다면 
 	 *자식 클래스의 메소드가 작성이 됩니다. 부모 클래스 사라짐 (method 재정의-다형성)
-	 *왜 사용을 하냐 : 부모 클래스에서 선언된 method가 마음에 들지않아 상속을 받지 않으려고 할때 
+	 *왜 사용을 하냐 : 부모 클래스에서 선언된 method가 마음에 들지않아 다른 내용을 출력하고 싶을때 사용합니다.  
 	 *인터페이스에서 많이 사용합니다.  
+	 *Overloading vs Override 
+	 * Overloading : 같은 클래스의 동일한 메소드 이름 다른 파라미터 
+	 * Override    : 다른 클래스의 동일한 메소드 이름 같은 파라미터  
 	*/
-	@Override //-> 해당 메소드 이름 + Contrl + Space
+	//@Override //-> 해당 메소드 이름 + Contrl + Space
+	/*
 	public void write() {
 		super.write();
+	}
+	*/
+	@Override
+	public void write() {
+		System.out.println("밑변 : " + w);
+		System.out.println("높이 : " + h);
+		System.out.println("면적 : " + area);
+		
 	}
 }
 public class Inheritance_Override {
