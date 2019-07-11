@@ -28,6 +28,8 @@ public abstract class CalenderClass {
 		//호출할 시간을 구하는 소스 
 		System.out.printf("%tF\n",now);
 		System.out.printf("%tT\n",now);
+		System.out.printf("%1$tF %1$tT \n",now,now);
+		// 1$ 파라미터값으로 받음 
 		// 월은 집어 넣으때는 -1 꺼널때는 +1
 		System.out.println("2020-10-10일 날짜 구하기");
 		now.set(2015,2-1,20);	

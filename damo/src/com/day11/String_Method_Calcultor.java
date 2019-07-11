@@ -21,7 +21,10 @@ public class String_Method_Calcultor {
 		 * 확장 for 문 -> 배열에 쓰이는 for문 format : for( 변수 : 배열 )
 		 * String[] op = {"+","-","*","/"};
 		 * for (String oper : op) {}
+		 * 
 		 */
+		
+		
 		for(String oper : new String[] {"+","-","*","/"}){
 			//index 으로 반환 
 			int pos = str.indexOf(oper); // * inpute 2 입력값이 없다면 예외 값은 -1 로 반환을 합니다. 
@@ -32,6 +35,7 @@ public class String_Method_Calcultor {
 				int num2 = Integer.parseInt(str.substring(pos+1));
 				int result = 0;				
 				char operator = str.charAt(pos);
+				// 더하기 연산 
 				
 				switch(operator) {
 				case '+' : 

@@ -57,7 +57,5 @@ public class Sting_Method {
 		System.out.println(s8.compareTo(s9)); // s8 < s9 -1
 		System.out.println(s9.compareTo(s8)); // s8 > s9  1
 		// a 97 b 98 c 99 d 100 e 101 
-		
-		
 	}
 }

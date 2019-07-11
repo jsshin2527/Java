@@ -2,7 +2,7 @@ package com.day11;
 
 import java.util.Calendar;
 import java.util.Scanner;
-public class Onehundred_Calcultor {
+public class OnehundredCoount_Calcultor {
 
 	public static void main(String[] args) {
 
