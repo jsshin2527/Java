@@ -1,6 +1,7 @@
 package com.day10;
 
 //모든 클래스의 최고 상위 클래스는 Object클래스입니다. 
+
 class Shape{
 	
 	private String title;
@@ -54,15 +55,13 @@ class Rect extends Shape{
 		System.out.println("밑변 : " + w);
 		System.out.println("높이 : " + h);
 		System.out.println("면적 : " + area);
-		
 	}
 }
 public class Inheritance_Override {
 	public static void main(String[] args) {	
 		Circle c = new Circle(10);
 		c.circleArea();
-		c.write();
-		
+		c.write();	
 		Rect r = new Rect();
 		r.rectArea(10,20);	
 		r.write(); //부모가 아우디와 자식의 아우디  

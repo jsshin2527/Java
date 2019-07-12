@@ -4,7 +4,7 @@ abstract class SortInt{
 	
 	private int[] value; 
 	
-	protected abstract void sorting();
+	protected abstract void sorting(); //실제로는 정의만 해놓은 것 따로 의미를 가지는 추상 메소드는 아닙니다. 
 
 	public void sort(int[] value) {
 		this.value = value;	
