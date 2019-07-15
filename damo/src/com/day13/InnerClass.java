@@ -38,7 +38,8 @@ public class InnerClass {
 		Outer1 out = new Outer1();
 		out.print();
 		// inner class 를 불러오는 방법 2
-
+		// 내부 클래스 객체는 외부 클래스의 객체를 사용하지 않고 단독으로 객체 ㅈ장 
+		
 		Outer1.Inner1 inner = out.new Inner1();
 		inner.write();	
 	}
