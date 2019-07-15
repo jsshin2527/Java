@@ -43,11 +43,7 @@ public class Iterator_Upcating_DownCasting {
 			}else if( o instanceof Character) {
 				c = (char)o;
 				System.out.println(c);
-			}
-			
-		}
-		
-		
+			}		
+		}	
 	}
-
 }

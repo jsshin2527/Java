@@ -18,14 +18,27 @@ public class ScoreMain {
 		while(true) {
 			
 			do{
-				System.out.print("1. 입력 2. 출력 3. 종료 : ");
+				System.out.println();
+				System.out.print("1. 입력 \n2. 출력 \n3. 학번 검색 \n4. 이름 검색  \n5. 총점내림정렬  \n6. 학번올림정렬 \n7. 종료: \n");
+				System.out.println();
+				System.out.print("메뉴얼을 선택하세요 ");
+				
 				ch = sc.nextInt();
+			
 			}while(ch<1);
 			switch(ch) {
 			case 1 :
 				ob.input(); break;
 			case 2 : 
 				ob.print(); break;
+			case 3 :
+				ob.searchHak(); break;
+			case 4 :
+				ob.searchName();break;
+			case 5 : 
+				ob.descSortTot(); break;
+			case 6 : 
+				ob.ascSortHak(); break;
 			default:
 				System.exit(0); //종료를 가지고 있는 고유값 
 			}

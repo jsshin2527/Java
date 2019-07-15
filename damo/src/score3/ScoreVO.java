@@ -57,15 +57,8 @@ public class ScoreVO { //Value Object  : Data 를 저장하는 저장 공간
 	
 			return null;
 		}
-		String str = String.format("%6s %6s %4d %4d %4d %4d %.2f \n",hak,name,kor,eng,mat,getTot(),getTot()/3.0);
-		
+		String str = String.format("%6s %6s %4d %4d %4d %4d %.2f \n",hak,name,kor,eng,mat,getTot(),getTot()/3.0);	
 			return str;
 		}
-	
-
-	
 	//getter setter  메소드 정의 값을 정의하고 가져오는 폼 
-	
-	
-
 }
