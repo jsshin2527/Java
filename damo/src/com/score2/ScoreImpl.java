@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ScoreImpl implements Score{
 
 	private int inwon;
+	
 	private Record[] rec;
 	
 	Scanner sc = new Scanner(System.in);
@@ -66,10 +67,10 @@ public class ScoreImpl implements Score{
 		return pan;
 	}
 	@Override
-	public void print() {
+	public void print() {	
+		// 111 suzi  10  10  30  10 
+		//          (가)(가)(가)(가) 
 		
-		// 111 suzi 10 10 30 10 
-		//          가 가 가 가 
 		for (int i = 0; i < inwon; i++) {	
 			System.out.printf("%s %s %d(%s) %d(%s) %d(%s) \n",rec[i].hak,rec[i].name
 														,rec[i].kor,panjung(rec[i].kor)

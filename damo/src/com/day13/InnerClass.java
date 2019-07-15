@@ -1,5 +1,6 @@
 /*
  * Inner Class
+ * 클래스 안에 클래스 
  * 
  */
 package com.day13;
@@ -10,6 +11,12 @@ class Outer1{
 	
 	//Outer가 객체생성되었다고 Inner도 생성이 된것이 아니다 
 	//Inner를 사용하려면 Outer의 객체를 생성해야 한다.
+	//OuterClass 생성후 InnerClass를 생성합니다. 
+	//Outer로 inner로 생성하는 방법이 있습니다. 
+	//NetstedClass
+	//class와 class 안에 화일을 만들수 있습니다. 
+	//메소드 안에 클래스를 만드는 경우도 있습니다. (Local method)
+	//
 	
 	public class Inner1{ //클래스 안에 클래스 : 클래스는 어디든 다 만들수 있습니다.  메소드 안에서도 생성 가능 
 		

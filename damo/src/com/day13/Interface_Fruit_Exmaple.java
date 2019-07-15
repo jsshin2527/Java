@@ -8,7 +8,6 @@
  *  
  */
 
-
 package com.day13;
 
 import java.util.Scanner;
@@ -16,6 +15,7 @@ import java.util.Scanner;
 interface Fruit{
 	
 		String Won = "원"; //public static final 생략 	
+		//인터페이스에서는 보통 메소드를 먼저 생각을 한다 
 		public int getPrice();
 		public String getName();	
 }
@@ -32,10 +32,12 @@ class Orange implements ItemFruit{
 	public int getPrice() {
 		return 1500;
 	}
+	
 	@Override
 	public String getName() {
 		return "오렌지";
-	} 
+	}
+	
 	@Override
 	public String getItems() {
 		return "과일";
@@ -47,10 +49,12 @@ class Apple implements ItemFruit{
 	public int getPrice() {
 		return 1000;
 	}
+	
 	@Override
 	public String getName() {
 		return "사과";
 	}
+	
 	@Override
 	public String getItems() {
 		return "과일";
@@ -58,13 +62,12 @@ class Apple implements ItemFruit{
 }
 public class Interface_Fruit_Exmaple {
 	
-	public void packing(ItemFruit o /* = new Orange*/) {
+	public void packing(ItemFruit o /*= new Orange*/) {
 		
 		System.out.println(o.getItems());
 		System.out.println(o.getName());
 		System.out.println(o.getPrice() + Fruit.Won);
 	}
-
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);		
