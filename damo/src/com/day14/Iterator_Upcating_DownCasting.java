@@ -31,6 +31,7 @@ public class Iterator_Upcating_DownCasting {
 		
 		//instance of 의 용도 예제 
 		// 참조 변수의 참조 타입을 알기 위해 사용 
+		// 제너릭을 사용하는 이유 
 		
 		while(it.hasNext()) {
 			Object o = it.next();

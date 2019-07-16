@@ -68,7 +68,9 @@ public class ScoreImpl implements Score {
 		while(it.hasNext()){
 			
 			ScoreVO vo = it.next();
-					
+			
+			//System.out.println(vo);
+			
 			if(vo.getHak().equals(searchHak)){
 				System.out.println(vo.toString());
 				break;
@@ -114,6 +116,7 @@ public class ScoreImpl implements Score {
 			if(vo.getHak().equals(searchname)){
 				System.out.println(vo.toString());
 				break;
+				
 			}
 		}
 	}	
@@ -121,23 +124,23 @@ public class ScoreImpl implements Score {
 	@Override
 	public void descSortTot() {
 		Comparator<ScoreVO> comp = new Comparator<ScoreVO>() {
-
 			@Override
 			public int compare(ScoreVO vo1, ScoreVO vo2) {				
 			
 				return vo1.getTot() < vo2.getTot()?1:-1; //방법 너가 주는 방법으로 정렬을 하겠다라는 의미 
 			}
 		};	
-		Collections.sort(lists,comp);
+		Collections.sort(lists,comp); //실제로 정렬함 
 		print();
 	}
+	
 	@Override
 	public void ascSortHak() { //compare 로 비교 
 		Comparator<ScoreVO> comp = new Comparator<ScoreVO>() {
 			@Override
 			public int compare(ScoreVO vo1, ScoreVO vo2) {
 				//return Integer.parseInt(vo1.getHak()) > Integer.parseInt(vo2.getHak())?1:-1;
-				return vo1.getHak().compareTo(vo2.getHak());
+				return vo1.getHak().compareTo(vo2.getHak());//compareTo 유니 코드 값으로 비교 
 			}
 		};
 		Collections.sort(lists,comp);

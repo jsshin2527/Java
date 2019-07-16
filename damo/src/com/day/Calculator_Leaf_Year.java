@@ -27,7 +27,9 @@ class Calculator_Leaf_Year
 		System.out.print("첫번째 수를 입력 하세요 : ");
 
 		num1 = Integer.parseInt(test8.readLine());
-
+		
+		//num1 = test8.readLine();
+		
 		System.out.print("두번째 수를 입력 하세요 : ");
 
 		num2 = Integer.parseInt(test8.readLine());

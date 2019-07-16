@@ -58,14 +58,28 @@ public class Collection_Framework {
 		//배열 안에 들어가있는 내용은 확장 for문으로도 출력이 가능합니다 
 		for(Object s : v){
 			
-			System.out.println((String)s + " ");
+			System.out.println((String)s + " "); //DownCasting 
 		}
 		
 		System.out.println();
 		
 		//Collection 은 전용 출력기 가 있습니다. 
-		//iterrator : 반복자 
+		//iterrator : 반복자 interface -> 강제성을 띄운다 -> 저장소의 역활을 합니다. 
+		
 		Iterator  it = v.iterator(); // <>을 명시하지 않는경우 Object 클래스로 받겠다라는 의미 입니다. 
+		
+		it.remove();
+		it.next();
+		it.hasNext();
+		
+		while(it.hasNext()) {
+			
+			Vector v1 = (Vector) it.next();	//move의 개념 copy +delete 의 개념으로 접근 	
+			
+			System.out.println(v1);
+			
+		}
+		
 		
 		while(it.hasNext()) {
 			str = (String)it.next();

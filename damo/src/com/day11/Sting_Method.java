@@ -17,6 +17,7 @@ public class Sting_Method {
 		for (String s : ss) {
 			System.out.println(s +" " );
 		}
+		
 		String s2 = "seoul";
 		String s3 = "Seoul";
 		System.out.println(s2.equals(s3)); //대문자 소문자 구분하기 때문에 같지 않습니다. 
@@ -52,7 +53,7 @@ public class Sting_Method {
 		System.out.println("abcdefg".startsWith("abc")); //true 
 		System.out.println("abcd efg".length()); // 8
 		String s8 = "abcdefg";
-		String s9 = "abceeeg";
+		String s9 = "abcedfg";
 		//사전식 정렬을 사용을 할때 정렬 
 		System.out.println(s8.compareTo(s9)); // s8 < s9 -1
 		System.out.println(s9.compareTo(s8)); // s8 > s9  1

@@ -113,7 +113,7 @@ public class ArrayList_Collection {
 		System.out.println("데이터 갯수 : " + v.size() + "개" );
 		
 		for (int i = 0; i < 20;i++) {
-			v.add(Integer.toString(i));
+			v.add(Integer.toString(i)); //문자열로 변환 
 		}
 		
 		for (String s : v) {
@@ -125,10 +125,8 @@ public class ArrayList_Collection {
 		// 8번째 정도에서 용량이 늘려간다 
 		// 특정 범위 삭제 
 		for (int i = 1; i <=10; i++) {
-			v.remove(5);
-			
+			v.remove(5);			
 		}
-		
 		for (String s : v) {
 			System.out.print(s+" ");
 		}
