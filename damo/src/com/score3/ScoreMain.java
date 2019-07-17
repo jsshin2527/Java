@@ -1,4 +1,4 @@
-package score3;
+package com.score3;
 
 import java.util.Scanner;
 
@@ -11,21 +11,23 @@ public class ScoreMain {
 		Scanner sc = new Scanner(System.in);
 		Score ob = new ScoreImpl();
 		/*
+		 * 
 		ob.input();
 		ob.print(); //1명의 데이터를 보여줍니다. 		
 		*/
 		int ch;
+		
 		while(true) {
 			
 			do{
 				System.out.println();
 				System.out.print("1. 입력 \n2. 출력 \n3. 학번 검색 \n4. 이름 검색  \n5. 총점내림정렬  \n6. 학번올림정렬 \n7. 종료: \n");
 				System.out.println();
-				System.out.print("메뉴얼을 선택하세요 ");
-				
+				System.out.print("메뉴얼을 선택하세요 ");	
 				ch = sc.nextInt();
 			
 			}while(ch<1);
+			
 			switch(ch) {
 			case 1 :
 				ob.input(); break;

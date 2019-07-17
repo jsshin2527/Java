@@ -1,13 +1,11 @@
 package com.score4;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-import score3.ScoreVO;
 
 public class ScoreImpl implements Score{
 
@@ -19,11 +17,11 @@ public class ScoreImpl implements Score{
 	
 	String hak;
 
-	
 	@Override
-	public void input() {
-	
-		System.out.print("학번 ?");
+	public void input(){
+		
+		
+		System.out.print("학번 ?");	
 		hak = sc.next();
 		
 		if(searchHak(hak)) { //T True F False
@@ -31,8 +29,9 @@ public class ScoreImpl implements Score{
 			System.out.println("추가 실패");
 			return; // 실행하지 말아라 
 		}
-		ScoreVO vo = new ScoreVO();
-		
+
+		ScoreVO vo =new ScoreVO();
+
 		System.out.print("이름?: ");
 		vo.setName(sc.next());
 		System.out.print("국어? : ");
@@ -43,34 +42,39 @@ public class ScoreImpl implements Score{
 		vo.setMat(sc.nextInt());
 		
 		hMap.put(hak,vo);
+		
+		//hMap.put(hak,vo);
 		System.out.println("추가 성공 ! ");
 	}
-
 	@Override
 	public void print() {
-		
+//		for(String str : hMap.keySet()) {
+//			System.out.println(str+" "+hMap.get(str).toString());
+//		}
+
 		Iterator<String> it = hMap.keySet().iterator();
-		
+
 		while(it.hasNext()) {
 			
 			String key = it.next();
 			ScoreVO vo = hMap.get(key);
-			System.out.println(key+" "+vo.toString());
-			System.out.print(vo.getName());
-			System.out.print(vo.getKor());
-			System.out.print(vo.getEng());
-			System.out.print(vo.getMat());
+			
+			System.out.println(key+" "+vo.toString());				
+			//System.out.print(vo.getName());
+			//System.out.print(vo.getKor());
+			//System.out.print(vo.getEng());	
+			//System.out.print(vo.getMat());
 		}
 	}
 	@Override
 	public boolean searchHak(String hak) {	
+		
 		if(hMap.containsKey(hak)) {
 			return true;
 		}	
 		return false;	
 		//return hMap.containsKey(hak);
 	}
-
 	@Override
 	public void delete() {
 		System.out.print("삭제할 학번을 입력하세요 :" );
@@ -111,11 +115,11 @@ public class ScoreImpl implements Score{
 			return;
 		}	
 		
-		System.out.print("수정할 국어 점수");
+		System.out.print("수정할 국어 점수 : ");
 		vo.setKor(sc.nextInt());
-		System.out.print("수정할 영어 점수");
+		System.out.print("수정할 영어 점수 : ");
 		vo.setEng(sc.nextInt());
-		System.out.print("수정할 수학 점수");
+		System.out.print("수정할 수학 점수 : ");
 		vo.setMat(sc.nextInt());	
 		
 		hMap.put(hak,vo);
@@ -127,7 +131,7 @@ public class ScoreImpl implements Score{
 
 	@Override
 	public void findHak() {
-		System.out.println("검색할 학번 : ");
+		System.out.print("검색할 학번 : ");
 		hak = sc.next();
 		if(!searchHak(hak)) {
 			System.out.println("학번이 없습니다. ");
@@ -149,13 +153,19 @@ public class ScoreImpl implements Score{
 	@Override
 	public void findName() {
 		String name;
+		
 		System.out.println("검색할 이름 : ");
+		
 		name = sc.next();
+		
 		Iterator<String> it = hMap.keySet().iterator();
 		
 		boolean flag = false;
+		
 		while(it.hasNext()) {
+			
 			String key = it.next();
+			
 			ScoreVO vo =hMap.get(key);
 			
 			if(vo.getName().equals(name)) {

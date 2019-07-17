@@ -38,7 +38,8 @@ public class ScoreVO {
 	@Override
 	public String toString() {
 		String str;	
-		str = String.format("%6s %4d %4d %4d %4d %.3f",name,kor,eng,mat,getTot(),getTot()/3.0);		
+		str = String.format("%6s %4d %4d %4d %.2f %.2f \n",name,kor,eng,mat,getTot(),getTot()/3.0);		
+		//String str = String.format("%6s %4d %4d %4d \n",name,kor,eng,mat);	
 		return str;
 	}
 }

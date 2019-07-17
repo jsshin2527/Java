@@ -5,4 +5,4 @@
  * @author stu
  *
  */
-package score3;
+package com.score3;

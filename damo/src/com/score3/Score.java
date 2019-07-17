@@ -1,4 +1,4 @@
-package score3;
+package com.score3;
 
 public interface Score {
 	public int input();

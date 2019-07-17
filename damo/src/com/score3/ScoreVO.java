@@ -1,4 +1,4 @@
-package score3;
+package com.score3;
 
 public class ScoreVO { //Value Object  : Data 를 저장하는 저장 공간 
 					   //DTO : Data Transfer Object 

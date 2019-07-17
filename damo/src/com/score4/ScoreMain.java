@@ -9,6 +9,7 @@ public class ScoreMain {
 		// 값을 가져올때는 getter 
 		// 값을 정의 할때는 setter 입니다. 
 		Scanner sc = new Scanner(System.in);
+		
 		ScoreImpl ob = new ScoreImpl();
 		/*
 		ob.input();
@@ -34,7 +35,7 @@ public class ScoreMain {
 				ob.print(); break;
 			case 3 :
 				ob.delete();break;
-			case 4 :
+			case 4 :		
 				ob.updata();break;
 			case 5 : 
 				ob.findHak();break;

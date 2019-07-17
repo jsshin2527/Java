@@ -46,7 +46,7 @@ public class TestScoreVO {
 		if(hak == null || name == null) {
 			return null;
 		}else {
-		String str = String.format(" %6s %6s %4d %4d %4d %4d %.2f \n",hak,name,linux,clang,java,tot,tot/3.0);
+		String str = String.format("%6s %6s %4d %4d %4d %4d %.2f \n",hak,name,linux,clang,java,tot,tot/3.0);
 		return str;
 		}
 	}

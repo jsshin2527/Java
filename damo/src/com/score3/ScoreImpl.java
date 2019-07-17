@@ -1,4 +1,4 @@
-package score3;
+package com.score3;
 
 import java.time.format.ResolverStyle;
 import java.util.ArrayList;
@@ -107,7 +107,8 @@ public class ScoreImpl implements Score {
 		
 		Iterator<ScoreVO> it = lists.iterator();
 		
-		String str;
+
+
 		
 		while(it.hasNext()){
 			
@@ -137,6 +138,7 @@ public class ScoreImpl implements Score {
 	@Override
 	public void ascSortHak() { //compare ·Î ºñ±³ 
 		Comparator<ScoreVO> comp = new Comparator<ScoreVO>() {
+			
 			@Override
 			public int compare(ScoreVO vo1, ScoreVO vo2) {
 				//return Integer.parseInt(vo1.getHak()) > Integer.parseInt(vo2.getHak())?1:-1;
