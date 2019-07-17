@@ -106,18 +106,13 @@ public class ScoreImpl implements Score {
 		String searchname = sc.next(); //문자열 변수 생성 
 		
 		Iterator<ScoreVO> it = lists.iterator();
-		
 
-
-		
 		while(it.hasNext()){
 			
-			ScoreVO vo = it.next();
-					
+			ScoreVO vo = it.next();		
 			if(vo.getHak().equals(searchname)){
 				System.out.println(vo.toString());
 				break;
-				
 			}
 		}
 	}	

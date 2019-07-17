@@ -9,7 +9,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 
-public class Test3 {
+public class Set_Stack_Queue_LinkedList {
 
 	public static void main(String[] args) {
 		//Set : 중복을 허용하지 않음 
@@ -104,3 +104,22 @@ public class Test3 {
 		}
 	}
 }
+
+
+/*
+ * List<자료형> lists = new ArrayList<자료형>();
+ * List<자료형> lists = new Vector<자료형>();
+ * 
+ * ArrayList<자료형> lists = new ArrayList<자료형>();
+ * Vector<자료형> lists = new Vector<자료형>();
+ * 
+ *==========================================================
+ *==========================================================
+ *
+ * Map<키자료형,데이터 자료형> map = new HashMap<>();
+ * Map<키자료형,데이터 자료형> map = new HashTalbe<>();
+ * 
+ * HashMap<키자료형,데이터 자료형> map = new HashMap<>();
+ * Hashtable<키자료형,데이터 자료형> map = new hashtable<>();
+ * 
+ */

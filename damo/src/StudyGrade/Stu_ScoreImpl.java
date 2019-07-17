@@ -95,8 +95,7 @@ public class Stu_ScoreImpl implements Stu_Score {
 		Iterator<String> so = hasMap.keySet().iterator();
 		
 		System.out.print("찾을 학번을 입력하세요 : ");
-		
-		
+			
 		stdnumber = sc.next();
 		
 		String key = so.next();
