@@ -12,12 +12,12 @@ import java.io.InputStreamReader;
 
 public class Exception_Example_Charater {
 
-	/*
+	
 	public static String getchar() {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		/*
+		
 		try {
 			
 			String str = null;
@@ -25,63 +25,61 @@ public class Exception_Example_Charater {
 			System.out.print("문자열을 입력하세요 : ");
 			
 			str = br.readLine();
-			char ch;
+			char ch = 0;
 			
 			for (int i = 0; i < str.length(); i++) {
 				 ch = str.charAt(i);
 			}
 			
 			for (int i = 0; i < str.length(); i++) {
-				System.out.println(ch[i]);
-			}
-			
+				System.out.println(ch);
+			}			
 		}catch(Exception e) {
 			System.out.println(e.toString());
 		}
-		*/
 		
+		 
 		
-		
-		/*
 		try {
 			
 			System.out.print("문자열을 입력하세요 : ");
 			
 			
+			String str = null;
 			for(int i = 0;i<str.length();i++) {
 				
 				char ch = str.charAt(i);
-			}
 			
-			/*
+		
+			
 			if(((ch<65) || (ch>90)) && ((ch<97) || (ch>122))) {
 				
+				}
 			}
-			*/
 			
 			//문자열의 길이가 5보다 작고 10보다 크면 error를 표시해 줍니다. 
-			/*
-			if(ch.length() >10 || ch.length()< 5 ) {
+			
+			if(true) {
 				throw new Exception("문자열이 5보다 작거나 10보다 큽니다. ");
 			
 			}
-			*/
 			
-		/*	
+	
+		
 		} catch (Exception e) {
 			System.out.println("문자열이 5보다 작거나 10보다 큽니다. ");
 		}
 		
 		return null;
 	}
-	/* 
+	
 	public static void main(String[] args) {
 
 		Exception_Example_Charater ex = new Exception_Example_Charater();
 		
-		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		//String checkcharter;
+		String checkcharter;
 		
 		try {
 		
@@ -94,5 +92,5 @@ public class Exception_Example_Charater {
 		}
 		
 	}
-	*/
+	
 }

@@ -16,7 +16,7 @@ public class NaverMain {
 		
 		while(true) {
 			
-			System.out.print("\n1. 회원가입 \n2. 전체 회원 출력 \n3. 아이디 검색 \n4. 이름 검색 \n5. 회원정보 수정 \n6.회원 삭제 \n7. 종료 ");
+			System.out.print("\n1. 회원가입 \n2. 전체 회원 출력 \n3. 아이디 검색 \n4. 이름 검색 \n5. 회원정보 수정 \n6. 회원 삭제 \n7. 종료 ");
 			
 			System.out.print("\n메뉴얼을 입력하세요 : ");
 			navermeun = sc.nextInt();

@@ -31,20 +31,24 @@ public class NaverImpl implements Naver {
 		nvo.setNaverid(sc.next());
 		
 		if(nvo.getNaverid().length() < 8 || nvo.getNaverid().length() >15) {		
+			
 			System.out.println("아이디 길이는 8이상 또는 15이하 이여야 합니다.");	
 			return;
+		
 		}
+		
 		for(int i = 0;i<nvo.getNaverid().length();i++) {
 			checkid =nvo.getNaverid().charAt(i);
 			
-			if(((checkid >='a') || (checkid <= 'z')) && ((checkid >= 'A') || (checkid <='Z'))){
+			if(((checkid >=65) && (checkid <= 90)) || ((checkid >= 97) && (checkid <= 122))){
 				countchar++;
-			}
-			if(((checkid >='1') || (checkid <= '9'))){
+			}else if(((checkid >=48) && (checkid <= 57))){
 				countnumber++;
+			}else {
+				System.out.println("잘못된 패턴 값이 입력되었습니다. ");
+				System.out.println("영문자,숫자 로만 입력하세요");
 			}
-		}
-		
+		}	
 		if(countnumber == nvo.getNaverid().length()) {
 			System.out.print("영문자와 숫자를 혼합여여 사용하여야 합니다.");
 			return;
@@ -56,22 +60,43 @@ public class NaverImpl implements Naver {
 		
 		System.out.println("!! 아이디 형식 체크 확인 !! ");
 		
+		//아이뒤 중복 체크 
+		/*
+		if(!naveridSearch(nvo.getNaverid())){
+			System.out.println("중복된 ID 가 있습니다. " );
+			return;
+		}
+		*/
+		naveroverlapcheckid(nvo.getNaverid());
+		/*
+		Iterator<NaverVO> searchvo = nlists.iterator();
+		
+		while(searchvo.hasNext()) {
+			NaverVO no = searchvo.next();
+			if(no.getNaverid().equals(nvo.getNaverid())) {
+				System.out.println("중복된 ID 가 있습니다. " );
+				return;
+			}
+		}
+		*/
+		System.out.println("ID중복 체크 !! 확인" );
 		System.out.print("네이버 Password :");
 		nvo.setNaverpassword1(sc.next());
 		System.out.print("네이버 Password 확인 :");
 		nvo.setNaverpassword2(sc.next());
-		
+	
 		// 패스워드가 맞지 않을경우 회원가입을 허가 하지 않습니다
+		// 중복체크 
 		if(!nvo.getNaverpassword1().equals(nvo.getNaverpassword2())) {
 			System.out.println("비밀번호가 다릅니다.");
 			return;
 		}
+		System.out.println("!! 비밀번호 일치 확인 !! ");
 		
 		System.out.print("네이버 회원 Name :");
 		nvo.setNavername(sc.next());
 		System.out.print("네이버 성별 1. 남자 2 여자:");
 		nvo.setNavergender(sc.nextInt());
-		System.out.println("!! 비밀번호 일치 확인 !! ");
 		
 		//1 남자 2 여자  값으로 표시 
 		if(nvo.getNavergender()== 1) {
@@ -87,7 +112,6 @@ public class NaverImpl implements Naver {
 		nvo.setNavertel(sc.next());
 	
 		nlists.add(nvo);
-
 	}
 
 	@Override
@@ -106,36 +130,29 @@ public class NaverImpl implements Naver {
 	public boolean naveridSearch(String serarch) {
 		
 		Iterator<NaverVO> nit = nlists.iterator();
-
-		while(nit.hasNext()) {		
-			
+		while(nit.hasNext()) {				
 			NaverVO nvoid = nit.next();
 			
 			if(!serarch.equals(nvoid.getNaverid())){
 				System.out.println("검색한 아이디가 없습니다. ");
 				return false;
 			}
-			System.out.println(nvoid.toString());
+			//System.out.println(nvoid.toString());
 		}
 		return true;
 	}
-	
-
 	@Override
 	public boolean navernameSearch(String search) {
 		
 		Iterator<NaverVO> nit = nlists.iterator();
 		
-		while(nit.hasNext()) {		
-			
+		while(nit.hasNext()) {				
 			NaverVO nvoid = nit.next();
-			
 			if(!search.equals(nvoid.getNavername())){
-		
 				System.out.println("검색한 이름이 없습니다. ");
 				return false;
 			}			
-			System.out.println(nvoid.toString());
+			//System.out.println(nvoid.toString());
 		}
 		return true;
 	}
@@ -143,19 +160,61 @@ public class NaverImpl implements Naver {
 	@Override
 	public void naverupdate() {
 		
-		System.out.println("수정할 ID 를 입력하세요 ");
+		Iterator<NaverVO> nit = nlists.iterator();
+		
+		System.out.print("수정할 ID 를 입력하세요 ");
 		
 		String nid = sc.next();
 		
-
+		NaverVO nvo = new NaverVO();
 		
+		while(nit.hasNext()) {
+			nvo = nit.next();
+			if(nvo.getNaverid().equals(nid)){
+				break;
+			}
+		}
+		
+		if(naveridSearch(nid)) {	
+			
+			System.out.print("수정할 ID의 Password를 입력하세요 : ");
+			String passwordcheck;
+			passwordcheck = sc.next();
+			
+			if(naverpasswordcheck(passwordcheck)) {
+				System.out.println("!!정보가 일치 합니다!!");
+				System.out.println("다음 정보를 수정하세요");
+				System.out.print("Passowrd 를 수정하겠습니까 ?? 1.네 2.아니요");
+				int qureypassword  = sc .nextInt();
+				
+				if(qureypassword == 1) {
+					System.out.println("패스워드정보를 수정하세요 ");
+					System.out.print("네이버 Password :");
+					nvo.setNaverpassword1(sc.next());
+					System.out.print("네이버 Password 확인 :");
+					nvo.setNaverpassword2(sc.next());
+					
+					if(!nvo.getNaverpassword1().equals(nvo.getNaverpassword2())) {
+						System.out.println("비밀번호가 다릅니다.");
+						return;
+					}
+					System.out.println("!! 비밀번호 일치 확인 !! ");
+					System.out.println("!! 정보가 수정 되었습니다. !!");
+				
+				}else {
+					System.out.println("수정을 종료 하겠습니다.");
+				}
+			
+			}else {
+				System.out.println("패스워드가 틀립니다.");
+				return;
+			}
+		}
 	}
 	@Override
 	public void naverdelete() {
-		
-		
-	}
 
+	}
 	@Override
 	public void naverfindid() {
 		
@@ -163,7 +222,7 @@ public class NaverImpl implements Naver {
 		
 		Iterator<NaverVO> nit = nlists.iterator();
 		
-		System.out.println("찾을 학번을 입력하세요 ");
+		System.out.print("찾을 ID을 입력하세요 ");
 		searchid = sc.next();
 		//리스트에 id 값이 있는지 true false로 확인 
 		if(naveridSearch(searchid)) {
@@ -182,5 +241,29 @@ public class NaverImpl implements Naver {
 		if(navernameSearch(searchname)) {
 			nit.next().getNaverid().equals(searchname);
 		}	
+	}
+	public void naveroverlapcheckid(String checkid) {
+		Iterator<NaverVO> searchvo = nlists.iterator();
+		
+		while(searchvo.hasNext()) {
+			NaverVO no = searchvo.next();
+			if(no.getNaverid().equals(checkid)) {
+				System.out.println("중복된 ID 가 있습니다. " );
+				return;
+			}
+		}
+	}
+	
+	public boolean naverpasswordcheck(String password) {
+		Iterator<NaverVO> nit = nlists.iterator();
+	
+		
+		while(nit.hasNext()) {	
+			NaverVO nob  = nit.next();
+			if(!nob.getNaverpassword1().equals(password)) {
+				return false;
+			}
+		}
+		return true;
 	}
 }
