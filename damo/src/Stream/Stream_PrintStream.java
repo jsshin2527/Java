@@ -18,11 +18,14 @@ public class Stream_PrintStream {
 				ps.println("홍길동");
 				ps.println("배수지");
 				ps.println("이효리");
+				
 				ps.close();
 				fos.close();
 				
 				//true : append 
-				fos = new FileOutputStream("d:\\doc\\out5.txt",true); //new는 그대로 만드는 것입니다. 
+				fos = new FileOutputStream("d:\\doc\\out5.txt",true);
+				//new는 그대로 만드는 것입니다. true의 인자값을 준다면 그대로 
+				//값을 누적하여 저장할수가 있습니다. 
 				ps = new PrintStream(fos);
 				
 				ps.println("A");
@@ -32,8 +35,6 @@ public class Stream_PrintStream {
 				
 				ps.close();
 				fos.close();
-				
-				
 			} catch (Exception e) {
 				System.out.println(e.toString());
 			}

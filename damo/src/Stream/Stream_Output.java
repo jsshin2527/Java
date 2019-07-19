@@ -3,7 +3,7 @@ package Stream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class Stream_Out {
+public class Stream_Output {
 
 	public static void main(String[] args) throws IOException {
 		
