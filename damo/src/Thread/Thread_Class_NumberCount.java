@@ -4,8 +4,8 @@ package Thread;
  * Thread 를 상속 
  * 
  */
-
-class MyThread1 extends Thread{
+ 							   //인터페이스 상속 
+class MyThread1 extends Thread /*implements Runnable*/ {
 	
 	private int num;
 	private String name;
@@ -15,6 +15,7 @@ class MyThread1 extends Thread{
 		this.name = name;
 	}
 	
+	//main 도 움직이고 run도 움직인다 
 	@Override 
 	public void run() {
 		
@@ -24,19 +25,20 @@ class MyThread1 extends Thread{
 			i++;
 		
 		try {
+			//sleep 스레드 잠시 작업 중지 
 			sleep(100); //1000이 1초 100은 0.1초 
 		} catch (Exception e) {	
 			}
 		}
 	}
 }
-public class Thread_Switch_NumberCount {
+public class Thread_Class_NumberCount {
 
 	public static void main(String[] args) {
 
 		System.out.println("main 시작 ....");
 		
-		MyThread1 t1 = new MyThread1(100 ,"첫번째 :");
+		MyThread1 t1 = new MyThread1(100 ,"첫번째 :" /*생성자의 인자값을 받아 초기화 합니다.*/);
 		MyThread1 t2 = new MyThread1(200 ,"두번째 :");
 		
 		t1.start();

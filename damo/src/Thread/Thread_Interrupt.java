@@ -2,6 +2,7 @@ package Thread;
 //*중요*
 //인터럽트 : 우선순위가 높은 프로그램을 먼저 실행시키고 다시 돌아오는 프로그램 
 //세수 -> 밥 -> 택배 -> 밥 -> 출근 
+//A -> B -> C -> D -> A
 class MyThread7 extends Thread{
 	
 	private Thread next;
@@ -22,7 +23,7 @@ class MyThread7 extends Thread{
 			System.out.println(getName() + " : " +i);
 			//스레드가 살아 있으면 현재 스레드를 멈춤 
 			if(next.isAlive()) {
-				next.interrupt();  
+				next.interrupt(); //stop 
 			}
 		}
 	}

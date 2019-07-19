@@ -20,7 +20,7 @@ class MyThread3 implements Runnable{
 	public void run() {
 		int i = 0;
 		
-		while(i<secondtime) {
+		while(true) {
 		
 			System.out.printf("%1$tF %1$tT \n",Calendar.getInstance());
 		

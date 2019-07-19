@@ -55,9 +55,8 @@ public class Thread_Lifecycle {
 			
 			//t2.join();
 			//System.out.println("join을 하지 않을때 t2 살아 있나요 ? " + t2.isAlive());	
-			//System.out.println("join후 t2 살아 있나요 ? " + t2.isAlive());
-		
-			
+			System.out.println("join후 t2 살아 있나요 ? " + t2.isAlive());
+					
 		} catch (Exception e) {
 			
 			

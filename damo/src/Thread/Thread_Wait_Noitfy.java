@@ -23,6 +23,7 @@ class MyThread9 implements Runnable{
 		}
 		return m;
 	}
+	
 	public void run() {
 		synchronized (this) {
 			for (int i = 0; i <= 10; i++) {
@@ -35,8 +36,7 @@ class MyThread9 implements Runnable{
 				drawMoney(1000); //1000원 인출 
 				
 				if(getBank() == 2000 || getBank() == 4000 || getBank() == 6000 || getBank() == 8000) {
-					try {
-						
+					try {					
 						wait(); //스레드가 멈추면서 synchronized 블럭을 열게 됩니다. 
 						
 					} catch (Exception e) {

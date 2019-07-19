@@ -48,11 +48,14 @@ class MyThreadLeg extends Thread{
 	@Override
 	public void run() {
 	
-		while(zum < 20 ) {
+		while(true) {
 			zum++;
 			System.out.print(".");
+			
+			if(zum == 20)
+				return;
 			try {
-				sleep(500);
+				sleep(300);
 			}catch(Exception e){
 
 			}
@@ -60,7 +63,7 @@ class MyThreadLeg extends Thread{
 	}
 }
 
-public class Ghost_Leg {
+public class Ghost_Leg_My {
 
 	public static void main(String[] args) {
 		

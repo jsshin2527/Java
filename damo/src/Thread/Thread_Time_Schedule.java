@@ -59,5 +59,4 @@ public class Thread_Time_Schedule extends Thread{
 							  // 따로 실행 시킬 메소드가 없기 때문에 다음과 같이 익명 클래스로 정의를 해주어도 괜찮습니다. 
 
 	}
-
 }

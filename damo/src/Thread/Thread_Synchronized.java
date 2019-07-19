@@ -1,7 +1,6 @@
 package Thread;
 
 //스레드 동기화 
-//
 
 class Mythread8 implements Runnable{
 	private int bank = 10000;
