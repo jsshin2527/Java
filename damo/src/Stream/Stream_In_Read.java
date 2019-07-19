@@ -18,12 +18,9 @@ public class Stream_In_Read {
 		int data;
 		System.out.print("문자열 입력 :");
 		while((data=System.in.read()) != -1/*1byte 값을 계속 읽어 냄  -1 : 값이 있을때 까지만 읽어 드려라 */) {
-		
 			char ch  = (char)data;
 			System.out.print(ch);
-			//가장 기본적인 스트림 
-			
-			
+			//가장 기본적인 스트림 	
 		}
 	}
 }

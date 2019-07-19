@@ -12,8 +12,8 @@ public class Stream_BufferedReader {
 		try {
 			
 			FileInputStream fis = new FileInputStream("d:\\doc\\test.txt");
-			
 			BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+			
 			
 			String str;
 			

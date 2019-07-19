@@ -31,6 +31,5 @@ public class Stream_FileClass {
 		//현재 프로그램의 경로 
 		String p = System.getProperty("user.dir"); //현재 사용자가 사용하는 디렉토리 정보가 담겨있음 
 		System.out.println("현재 경로 : " + p);
-		
 	}
 }

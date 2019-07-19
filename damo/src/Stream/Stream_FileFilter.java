@@ -35,16 +35,15 @@ class MyFileList implements FileFilter{
 				System.out.println("\n폴더 출력 .....");
 				for (int i = 0; i < lists.length; i++) {
 					//File file = lists[i];
-					System.out.println(lists[i].getName());
+					System.out.print(lists[i].getName());
 					System.out.println("\t "+lists[i].length());
 				}
 			}
-			System.out.println("\n 디렉터토리 구조");
+			System.out.println("\n 루트 디렉터토리 구조");
 			
 			File[] root = File.listRoots();
 			
 			for (int i = 0; i < root.length; i++) {
-			
 				System.out.println(root[i].getPath());
 			}
 			
@@ -69,7 +68,7 @@ public class Stream_FileFilter {
 
 	public static void main(String[] args) {
 		
-		MyFileList nf = new MyFileList("d:\\doc\\");		
+		MyFileList nf = new MyFileList("d:\\java\\eclipse");		
 		nf.result();
 	}
 }

@@ -10,18 +10,14 @@ public class Stream_FIleCopy2 {
 		
 		File f = new File(file1);
 		
-		if(!f.exists()) {
-		
+		if(!f.exists()) {	
 			return false;
-	
-		}
-		
+		}	
 		try {
 			FileInputStream fis = new FileInputStream(f);
 			FileOutputStream fos = new FileOutputStream(file2);
 			
 			int data = 0;
-			
 			byte[] buffer = new byte[1024];
 			
 			while((data=fis.read(buffer,0,1024))!= -1){
@@ -29,8 +25,6 @@ public class Stream_FIleCopy2 {
 			}
 			fis.close();
 			fos.close();
-			
-		
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
