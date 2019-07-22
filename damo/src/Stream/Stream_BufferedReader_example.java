@@ -5,7 +5,7 @@ import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-public class Test2 {
+public class Stream_BufferedReader_example {
 
 	public final static int BUFFER_SIZE = 512;
 	

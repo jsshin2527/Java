@@ -5,4 +5,4 @@
  * @author stu
  *
  */
-package com.day19;
+package StudentInfomationScore;

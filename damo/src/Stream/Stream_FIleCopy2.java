@@ -23,7 +23,6 @@ public class Stream_FIleCopy2 {
 			while((data=fis.read(buffer,0,1024))!= -1){
 				System.out.println(data);
 				fos.write(buffer,0,data);
-				
 			}
 			fis.close();
 			fos.close();
