@@ -1,38 +1,44 @@
-
 package Stream;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FileInputStream;
-/*
- * FileFilter 인터페이스 
- * 해당 코딩은 객체를 2개 생성하는것으로 
- * 객체를 생성함과 동시에 초기화를 했습니다 
- * File클래스를 사용하면서 파일의 객체를 생성했습니다. 
- * 
- */
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Scanner;
-
-
-	
+import java.io.FileOutputStream;
 
 public class Testcoding {
 
-	public static void main(String[] args) throws IOException {
+	public boolean filecopy(String file1,String file2) {
 		
-		InputStream ni = new FileInputStream("d:\\doc\\test.txt");
+		File f = new File(file1);
 		
-		byte[] by = new byte[1024];
+		if(!f.exists()) {
+			return false;
+		}
+		try {
+			FileInputStream fis = new FileInputStream(f);
 		
-		int data=0;
-		
-		while((ni.read(by,0,1024))!= -1){
+			FileOutputStream fos = new FileOutputStream(file2);
+			int data =0;
+			byte[] buffer = new byte[1024];
 			
-			System.out.print());
-		};
+			while((data=fis.read(buffer,0,1024))!= -1) {
+				fos.write(buffer,0,data);
+			}
+			fis.close();
+			fos.close();
+		}catch(Exception e) {
+			
+		}
+	return true;
+	}
+	
+	public static void main(String[] args) {
+	
+		Testcoding ob = new Testcoding();
 		
-		ni.close();
+		if(ob.filecopy("d:\\doc\\test.txt","d:\\doc\\out6.txt")){
+			System.out.println("파일 복사 성공");
+		}else {
+			System.out.println("파일 복사 실패 ");
+		}
 	}
 }

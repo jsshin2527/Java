@@ -27,5 +27,4 @@ public class Stream_OutputStreamWriter {
 			wr.flush(); //생략이 불가능  
 		}
 	}
-
 }

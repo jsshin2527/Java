@@ -21,7 +21,9 @@ public class Stream_FIleCopy2 {
 			byte[] buffer = new byte[1024];
 			
 			while((data=fis.read(buffer,0,1024))!= -1){
+				System.out.println(data);
 				fos.write(buffer,0,data);
+				
 			}
 			fis.close();
 			fos.close();
@@ -34,7 +36,7 @@ public class Stream_FIleCopy2 {
 	public static void main(String[] args) {
 		
 		Stream_FIleCopy2 ob = new Stream_FIleCopy2();
-		if(ob.fileCopy("d:\\doc\\test.txt","d:\\\\doc\\\\out3.txt")){
+		if(ob.fileCopy("d:\\doc\\test.txt","d:\\doc\\out3.txt")){
 			System.out.println("파일 복사 성공 ");
 		}else {
 			System.out.println("파일 복사 실패 ");

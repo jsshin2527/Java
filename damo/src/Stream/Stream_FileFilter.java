@@ -7,6 +7,8 @@ import java.io.FileFilter;
 //해당 코딩은 객체를 2개 생성하는것으로 
 //객체를 생성함과 동시에 초기화를 했습니다. 
 //File 클래스를 사용하면서 파일의 객체를 생성했습니다. 
+//Spring 에서는 의존성 주입 이라고도 합니다. 
+
 class MyFileList implements FileFilter{
 	
 	private File f;
