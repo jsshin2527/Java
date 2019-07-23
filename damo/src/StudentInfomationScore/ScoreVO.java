@@ -5,7 +5,8 @@ import java.io.Serializable;
 public class ScoreVO implements Serializable {
 	
 	
-	private static final long serialVersionUID = 2663276651634611111L;
+	//private static final long serialVersionUID = 2663276651634611111L;
+	
 	private String name;
 	private int score;
 	private String brith;

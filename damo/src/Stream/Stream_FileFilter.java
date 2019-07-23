@@ -29,6 +29,7 @@ class MyFileList implements FileFilter{
 			}
 			System.out.println("절대 경로 : "+f.getAbsolutePath());
 			System.out.println("파일 크기 : "+f.length());
+			
 			//내가 읽어올 파일이 디렉토리일경우 	
 			if(f.isDirectory()) {
 			
@@ -41,8 +42,8 @@ class MyFileList implements FileFilter{
 					System.out.println("\t "+lists[i].length());
 				}
 			}
-			System.out.println("\n 루트 디렉터토리 구조");
 			
+			System.out.println("\n 루트 디렉터토리 구조");
 			File[] root = File.listRoots();
 			
 			for (int i = 0; i < root.length; i++) {
@@ -51,7 +52,6 @@ class MyFileList implements FileFilter{
 			
 			//C:
 			//D:
-			
 		}catch(Exception e) {
 			System.out.println(e.toString());
 		}

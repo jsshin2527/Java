@@ -20,14 +20,9 @@ import javax.swing.plaf.synth.SynthSplitPaneUI;
 public class ScoreImpl implements Score{
 
 	List<ScoreVO> lists = null;
-	
-	Scanner sc = new Scanner(System.in);
-	
+	Scanner sc = new Scanner(System.in);	
 	private File f;
-	
 	String scorefile = "d:\\score\\score.txt";
-	
-	
 	public ScoreImpl() throws IOException, ClassNotFoundException {
 		
 		try {
@@ -58,7 +53,6 @@ public class ScoreImpl implements Score{
 		}
 	
 	}
-	
 	@Override
 	public int input() {
 		
@@ -90,7 +84,6 @@ public class ScoreImpl implements Score{
 			System.out.println(vo.toString());
 		}
 	}
-	
 	@Override
 	public void store() {
 		try {

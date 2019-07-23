@@ -19,6 +19,7 @@ public class Stream_DataInpuStream {
 		try {
 			
 			FileOutputStream fos = new FileOutputStream("d:\\doc\\out7.txt");
+			//ÇÑ¹ø´õ °¨½ÎÁÜ 
 			DataOutputStream dos = new DataOutputStream(fos);
 			
 		
@@ -29,6 +30,7 @@ public class Stream_DataInpuStream {
 			dos.writeInt(20);
 			
 			fos.close();
+			dos.close();
 			
 			FileInputStream fis = new FileInputStream("d:\\doc\\out7.txt");
 			DataInputStream dis = new DataInputStream(fis);
@@ -38,6 +40,8 @@ public class Stream_DataInpuStream {
 			System.out.println(dis.readChar());
 			System.out.println(dis.readInt());
 			
+			dis.close();
+			fis.close();
 			
 		} catch (Exception e) {
 			// TODO: handle exception

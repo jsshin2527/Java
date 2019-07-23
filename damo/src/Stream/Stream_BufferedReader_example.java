@@ -23,6 +23,7 @@ public class Stream_BufferedReader_example {
 			 */
 			FileInputStream fis = new FileInputStream("d:\\doc\\test.txt");
 			FileOutputStream fos = new FileOutputStream("d:\\doc\\out6.txt");
+			//ÇÑ¹ø´õ °¨½ÎÁÜ 
 			
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			BufferedOutputStream bos = new BufferedOutputStream(fos);

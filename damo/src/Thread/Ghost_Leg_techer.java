@@ -68,14 +68,17 @@ public class Ghost_Leg_techer {
 		do {
 			System.out.print("발표자 인원수 : ");
 			inwon = sc.nextInt();
+			
 		}while(inwon<1||inwon>saram);
 		
 		num = new int[inwon];
 		n=0;
 		
 		while(n<inwon) {
-			num[n] = rd.nextInt(saram);
+			num[n]= rd.nextInt(saram)+1; 
+			
 			for (i = 0; i < n ; i++) {
+				
 				if(num[i] == num[n]) {
 					n--;
 					break;

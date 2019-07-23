@@ -14,7 +14,6 @@ import java.io.ObjectOutputStream;
  * 조금 더 완벽한 제어가 가능하다 
  * writeExternal().readExternal() 메소드를 정의 한다 
  * 
- * 
  */
 
 class DataTest implements Externalizable{
