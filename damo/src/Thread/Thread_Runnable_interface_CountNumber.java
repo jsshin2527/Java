@@ -21,7 +21,7 @@ class MyThread2 implements Runnable{
 			System.out.println(name + " : " +i);
 			i++;
 		try {
-			Thread.sleep(100);
+			//Thread.sleep(100);
 		} catch (Exception e) {
 
 			}
@@ -40,6 +40,13 @@ public class Thread_Runnable_interface_CountNumber{
 		
 		t1.start();
 		t2.start();
+		
+		try {
+			//t1.join();
+			t2.join();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 		System.out.println("main Á¾·á ..... ");
 		

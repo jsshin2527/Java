@@ -12,7 +12,6 @@ import java.awt.event.WindowEvent;
 
 /*
  * Home안에 있는 객체의 이벤트를 관리하는 인터페이스 
- * 
  */
 
 public class JavaAWT_Event_Object extends Frame implements ActionListener{
@@ -37,9 +36,7 @@ public class JavaAWT_Event_Object extends Frame implements ActionListener{
 			@Override
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);
-			}
-			
-			
+			}	
 		});
 		//감시자 
 		tf.addActionListener(this);

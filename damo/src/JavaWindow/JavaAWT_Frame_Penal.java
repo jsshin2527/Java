@@ -72,10 +72,72 @@ public class JavaAWT_Frame_Penal extends Frame implements ActionListener{
 		new JavaAWT_Frame_Penal();
 	}
 
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+	
+		Object ob = e.getSource();
 		
+		if(ob instanceof Button) {
+			Button b = (Button)ob;
+		try {
+			int num1 = Integer.parseInt(tf1.getText());
+			int num2 = Integer.parseInt(tf2.getText());
+			
+			String str = "";
+			
+			if(b==btn1) {
+				str = String.format("%d+%d=%d",num1,num2,(num1+num2));
+			}else if(b==btn2) {
+				str = String.format("%d+%d=%d",num1,num2,(num1-num2));
+			}else if(b==btn3) {
+				str = String.format("%d+%d=%d",num1,num2,(num1/num2));
+			}else if(b==btn4) {
+				str = String.format("%d+%d=%d",num1,num2,(num1*num2));
+			}
+			tf3.setText(str);
+			
+		} catch (Exception e2) {
+			tf3.setText("입력오류");		
+		}
 	}
-
+		/*
+		int result = 0;
+		int num1 = 0;
+		int num2 = 0;
+		char oper = 0;
+		if(ob instanceof Button) {	
+			
+			if(ob == btn1) {
+				num1 = (Integer.parseInt(tf1.getText()));
+				num2 = (Integer.parseInt(tf2.getText()));
+				oper = '+';
+				result = num1+num2;
+			}
+			if(ob == btn2) {
+				num1 = (Integer.parseInt(tf1.getText()));
+				num2 = (Integer.parseInt(tf2.getText()));
+				oper = '-';
+				result = num1-num2;
+			}
+			if(ob == btn3) {
+				num1 = (Integer.parseInt(tf1.getText()));
+				num2 = (Integer.parseInt(tf2.getText()));
+				oper = '*';
+				result = num1/num2;
+			}
+			if(ob == btn4) {
+				num1 = (Integer.parseInt(tf1.getText()));
+				num2 = (Integer.parseInt(tf2.getText()));
+				oper = '/';
+				result = num1*num2;
+			}
+			String strresult = Integer.toString(result);
+			String strnum1 = Integer.toString(num1);
+			String strnum2 = Integer.toString(num2);
+			String stroper = Integer.toString(stroper);
+			tf3.setText(strnum1+stroper+strnum2+strresult);
+		*/
+	}
 }

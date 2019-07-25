@@ -21,7 +21,8 @@ public class JavaAWT_Student_Frame extends Frame implements ActionListener {
 	private JavaAWT_Student_Frame() {
 		String[] title = {"이름","국어","영어","수학","총점"};
 		setTitle("성적처리");
-		setLayout(null); //레이아웃 초기화 (수동배치)
+		setLayout(null); //레이아웃 초기화 (수동배치) Layout을 없애다 
+		
 		
 		for (int i = 0; i < 5 ;i++) {
 			//레이블 
@@ -57,10 +58,8 @@ public class JavaAWT_Student_Frame extends Frame implements ActionListener {
 		btn2.addActionListener(this);		
 		btn2.addKeyListener(new KeyHandler());
 		addWindowListener(new WindowAdapter() {
-
 			@Override
 			public void windowClosing(WindowEvent e) {
-
 				System.exit(0);
 			}
 			

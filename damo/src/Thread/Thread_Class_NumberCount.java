@@ -26,7 +26,7 @@ class MyThread1 extends Thread /*implements Runnable*/ {
 		
 		try {
 			//sleep 스레드 잠시 작업 중지 
-			sleep(100); //1000이 1초 100은 0.1초 
+			//sleep(100); //1000이 1초 100은 0.1초 
 		} catch (Exception e) {	
 			}
 		}
@@ -43,8 +43,12 @@ public class Thread_Class_NumberCount {
 		
 		t1.start();
 		t2.start();
-		
+		try {
+			//t1.join();
+			t2.join();
+			
+		} catch (Exception e) {	
+		}
 		System.out.println("main 종료 ... ");
 	}
-
 }

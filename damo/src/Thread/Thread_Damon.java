@@ -46,22 +46,21 @@ public class Thread_Damon {
 		t3.start();
 		
 		//스레드의 경우 main이 죽어도 실행이 되는데 데몬 스레드는 main 스레드가 죽으면 같이 죽습니다. 
-		
 		try {
 			//main 메소드를 쉬어라 
-			Thread.sleep(1000);
+			Thread.sleep(100);
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 		
 		try {
+			
 			t1.join();
 			t2.join();
 			t3.join();
-			
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 		}
 		System.out.println("main 종료 ... ");
 	}
