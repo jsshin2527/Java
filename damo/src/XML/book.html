@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>book XML 파싱</title>
+<script type="text/javascript">
+
+	var xmlDoc = new ActiveXObject("Msxml2.DOMDocument");
+	
+	xmlDoc.load("book.xml");
+	
+	function printNodeItem(){
+
+		var root = xmlDoc.documentElement;
+		//테스트용 경고 창 	alert("테스트");	
+		//var root = xmlDoc.getElementsByTagName("booklist")[0];
+		//book 에 책 2권이 담겨있습니다. 
+		var books = root.getElementsByTagName("book");
+		
+		var out = "";
+		for(var i=0;i<books.length;i++){
+			//단축키 설정이 가능합니다.  
+			var book = books[i];
+			out +="\n분류: " + book.getAttribute("kind")
+					+", 제목 : " +book.getElementsByTagName("title")[0].firstChild.nodeValue
+					+", 저자 : " +book.getElementsByTagName("author")[0].firstChild.nodeValue
+					+", 가격 : " +book.getElementsByTagName("price")[0].firstChild.nodeValue
+		}
+		alert(out);
+	}
+	
+	function insert(){
+		
+		var root = xmlDoc.documentElement;
+		var book = root.getElementsByTagName("book")[0];
+		
+		book.setAttribute("year","2010");
+		
+		var node = xmlDoc.createElement("출판사");
+		var text = xmlDoc.createTextNode("우리출판사");
+		
+		book.appendChild(node);
+		book.appendChild(text);	
+		alert(xmlDoc.xml);
+	}
+	function remove(){
+		var root = xmlDoc.documentElement;
+		//var book = root.getElementsByTagName("book")[0];
+		
+		for(var i=0;i<root.childNodes.length;i++){
+			var book = root.getElementsByTagName("book");
+			book.removeAttribute("kind");
+		}
+		alert(xmlDoc.xml)
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="노드 출력" onclick="printNodeItem()"/><br>
+	<input type="button" value="추가" onclick="insert()"/><br>
+	<input type="button" value="제거" onclick="remove()"/><br>
+</body>
+</html>

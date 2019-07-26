@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lists>
+	<total>4</total>
+	<comment num="3">
+		<name>이순신</name>
+		<content>장군</content>
+		<birth>1545-4-28</birth>
+	</comment>
+	<comment num="4">
+		<name>허준</name>
+		<content>의사</content>
+		<birth>1539-10-10</birth>
+	</comment>
+	<comment num="2">
+		<name>배수지</name>
+		<content>가수</content>
+		<birth>1994-10-10</birth>
+	</comment>
+	<comment num="1">
+		<name>홍길동</name>
+		<content>산적</content>
+		<birth>1800-10-10</birth>
+	</comment>
+</lists>

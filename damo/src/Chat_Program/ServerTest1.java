@@ -24,10 +24,8 @@ public class ServerTest1 extends Frame implements ActionListener,Runnable{
 	
 
 	private static final long serialVersionUID = 1L;
-
 	private TextArea ta = new TextArea();
 	private TextField tf =new TextField();
-	
 	private ServerSocket ss = null;
 	private Socket sc = null;
 	
@@ -51,15 +49,12 @@ public class ServerTest1 extends Frame implements ActionListener,Runnable{
 	
 	public void serverSocketstart() {
 		try {
-			
 			//서버 소켓을 생성 
 			ss = new ServerSocket(7777);
 			ta.setText("서버 시작 !!");
 			//클라이언트가 접속해 오기를 기다립니다. 
-			//서버 소켓과 연결하는 작업이 필요 
-			
-			sc = ss.accept();
-			
+			//서버 소켓과 연결하는 작업이 필요 	
+			sc = ss.accept();	
 			Thread th = new Thread(this);
 			//run 메소드를 호출합니다. 
 			th.start();
@@ -72,13 +67,10 @@ public class ServerTest1 extends Frame implements ActionListener,Runnable{
 	public static void main(String[] args) {
 		new ServerTest1().serverSocketstart();
 	}
-
 	//데이터를 보낼때 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		
-		String str = tf.getText();
-		
+	public void actionPerformed(ActionEvent e) {	
+		String str = tf.getText();		
 		//공백 제거 양쪽 공백을 없애다 
 		if(str.trim().equals(null)) {
 			return;
@@ -106,11 +98,9 @@ public class ServerTest1 extends Frame implements ActionListener,Runnable{
 	}
 	//데이터를 받을때  
 	@Override
-	public void run() {
-		
+	public void run() {	
 		String str; 
-		String ip;
-		
+		String ip;		
 		try {
 			//클라이언트가 접속하지 않았으면 
 			if(sc==null) {
@@ -126,17 +116,13 @@ public class ServerTest1 extends Frame implements ActionListener,Runnable{
 			//클라이언트가 보낸 데이터를 받음  
 			while((str=br.readLine())!= null) {
 				ta.append("\n\r"+str);
-			}
-			
+			}		
 		} catch (Exception e) {
 			ta.append("\n\r 클라이언트와 연결 종료 ");
-			//Socket 정보 초기화 
-
+			//Socket 정보 초기화
 			sc = null;
 			ss = null;
-		}
-		
+		}	
 	}
-
 	
 }

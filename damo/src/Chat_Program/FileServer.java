@@ -8,24 +8,17 @@ import java.net.Socket;
 public class FileServer {
 
 	class WorkThread extends Thread{
-		
 		private Socket sc = null;
-		
 		public WorkThread(Socket sc) {
 			this.sc = sc;
 		}
-		
 		@Override
 		public void run() {
 		
-			try {
-				
-				ObjectInputStream ois = new ObjectInputStream(sc.getInputStream());
-				
+			try {	
+				ObjectInputStream ois = new ObjectInputStream(sc.getInputStream());			
 				System.out.println(sc.getInetAddress().getAddress()+"접속 ....");
-
-				FileOutputStream fos = null;
-				
+				FileOutputStream fos = null;	
 				Object ob = null;
 				
 				while((ob=ois.readObject())!= null) {
@@ -73,13 +66,11 @@ public class FileServer {
 			wt.start();
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 		}
-	}
-	
+	}	
 	public static void main(String[] args) {
 		//파일을 받는 서버 
 		new FileServer().serverStart();
 	}
-
 }

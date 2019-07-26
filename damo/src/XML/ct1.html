@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>XML Study</title>
+</head>
+<script type="text/javascript">
+	//DOM 객체를 받을 객체 생성 
+	var xmlDoc = new ActiveXObject("Msxml2.DOMDocument");	
+	xmlDoc.load("ct.xml");
+	function printNodeName(){
+		
+		//alert("테스트");
+		var city = xmlDoc.getElementsByTagName("도시")[0];
+		//첫번째 자식의 노드를 가지고 와라 
+		var cityName = city.firstChild.nodeName;
+		alert("첫번째 도시 : " + cityName);
+		var cityName = city.lastChild.nodeName;
+		alert("마지막 도시 : " + cityName);
+		
+		var cityNames = "";
+		for(var i=0;i<city.childNodes.length;i++){
+			cityNames = cityNames + "\n" + city.childNodes[i].nodeName;
+		}
+		alert("전체 도시 " + cityNames);
+		
+	}
+	
+	function printNodeValue(){
+		var seoul =	xmlDoc.getElementsByTagName("서울")[0];
+		//서울에 값만 불러오기 
+		//var items = seoul.getElementsByTagName("구");
+		//모든 구의 내용을 불러오기 
+		var items = xmlDoc.getElementsByTagName("구");
+		var out = "";
+		for(var i=0;i<items.length;i++){
+			out += "\n"+items[i].childNodes[0].nodeValue;
+		}
+		alert(out);
+	}
+	
+	function printXML(){
+		alert(xmlDoc.xml);
+	}
+</script>
+
+<body>
+
+	<input type="button" value = "노드 이름 출력" onclick="printNodeName();"/><br>
+	<input type="button" value = "노드 값 출력" onclick="printNodeValue();"/><br>
+	<input type="button" value = "XML 값 전체출력" onclick="printXML();"/><br>
+</body>
+</html>

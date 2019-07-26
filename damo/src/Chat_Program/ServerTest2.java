@@ -29,8 +29,7 @@ public class ServerTest2 {
 	}
 	//내부클래스 ServerTest2클래스안에서만 사용하는 클래스
 	//소켓별 스레드 생성 
-	class WorkerThread extends Thread{
-		
+	class WorkerThread extends Thread{		
 		private Socket sc;
 		public WorkerThread(Socket sc) {
 			this.sc = sc;
@@ -40,11 +39,9 @@ public class ServerTest2 {
 			String ip = null;
 			String msg = null;		
 			try {
-				
 				BufferedReader br = new BufferedReader(new InputStreamReader(sc.getInputStream()));
 				ip = sc.getInetAddress().getHostAddress();
 				clients.add(sc);
-				
 				//다른 클라이언트에게 접속사실을 알림 
 				msg = "["+ip+"]가 입장했습니다.";
 				for(Socket s : clients/*ArrayList*/) {			
