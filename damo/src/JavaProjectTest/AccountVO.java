@@ -1,28 +1,19 @@
-package com.JavaProject;
+package JavaProjectTest;
 
 import java.io.Serializable;
 
-public class AccountVO implements Serializable {
-	
-	
+public class AccountVO  implements Serializable{
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private String name;
-	private int age;
-	private int gender;
+	private String age;
+	private String gender;
 	private String phone;
 	private String email;
 	private String id;
 	private String password;
-
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	
+	 
 	public String getPassword() {
 		return password;
 	}
@@ -35,16 +26,16 @@ public class AccountVO implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
-	public int getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(int gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	public String getPhone() {
@@ -58,22 +49,17 @@ public class AccountVO implements Serializable {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}	
-	
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	@Override
 	public String toString() {
-		String genderformat = "";
-		
-		if(gender == 1) {
-			genderformat = "³²";
-		}else {
-			genderformat = "¿©";
-		}
 		String str;
-		
-		str = String.format("%6s %3s %3d %5s %5s %5s",id,name,age,genderformat,phone,email);
-		
+		str = String.format("%6s %6s %6s %6s %6s %6s",id,name,age,gender,phone,email);
 		return str;
-
 	}
 }

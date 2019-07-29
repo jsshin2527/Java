@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class AccountImpl extends AccountVO implements Account{
 
@@ -36,8 +37,6 @@ public class AccountImpl extends AccountVO implements Account{
 				aclists = new ArrayList<AccountVO>();
 				System.out.println("회원정보가 없습니다.");
 			}else{
-				
-				//aclists = new ArrayList<AccountVO>();
 				FileInputStream fis = new FileInputStream(accountmanagefilepath);
 				ObjectInputStream ois = new ObjectInputStream(fis);
 				aclists = (List<AccountVO>)ois.readObject();
@@ -51,23 +50,46 @@ public class AccountImpl extends AccountVO implements Account{
 		
 		AccountVO avo = new AccountVO();
 		List<AccountVO> templists = new ArrayList<AccountVO>();
-		
-		//System.out.println("회원 가입 프로그램입니다");
+	
 		System.out.println("회원 정보를 입력하세요 : ");
-		System.out.print("사용할 ID 를 입력하세요 : ");
+		System.out.println("사용할 ID 를 입력하세요 : ");
+		System.out.println("*영문자 숫자 혼합하여 8~12까지 입력하세요*");
+		System.out.print(" :");
 		avo.setId(asc.next());
-		System.out.print("사용할 패스워드를 입력하세요 ");
+		
+		if(!OverlapID(avo)){
+			System.out.println("중복이 된 아이디가 있습니다.");
+			System.out.println("다른 아이디를 입력하세요");
+			return;
+		}
+		if(!FormatIDCheck(avo)) {
+			System.out.println("영문자 숫자혼합하여 8~12이내로 적어주세요");
+			return;
+		}
+		System.out.println("사용할 패스워드를 입력하세요 ");
+		System.out.print(" :");
 		avo.setPassword(asc.next());
-		System.out.print("이름을 입력하세요 : ");
+		System.out.println("이름을 입력하세요 ");
+		System.out.print(" :");
 		avo.setName(asc.next());
-		System.out.print("나이를 입력하세요 : ");
-		avo.setAge(asc.next());
-		System.out.print("성별을 입력하세요 : ");
-		avo.setGender(asc.next());
-		System.out.print("휴대폰 번호를 입력하세요 : ");
+		System.out.println("나이를 입력하세요 ");
+		System.out.print(" :");
+		avo.setAge(asc.nextInt());
+		System.out.println("성별을 입력하세요 1. 남자 2 . 여자 ");
+		System.out.print(" :");
+		avo.setGender(asc.nextInt());
+		System.out.print("휴대폰 번호를 입력하세요 (ex 010-1111-2222)");
+		System.out.print(" :");
 		avo.setPhone(asc.next());
-		System.out.print("이메일을 입력하세요 : ");
+		FormatphoneCheck(avo);
+		
+		System.out.println("이메일을 입력하세요 (ex abc@bcd.com ");
+		System.out.print(" :");
 		avo.setEmail(asc.next());
+		if(!FormatEmailCheck(avo)) {
+			System.out.println("이메일 형식에 맞지 않습니다.");
+		}
+		
 		templists.add(avo);
 		aclists.add(avo);
 		filestore(templists);
@@ -101,8 +123,6 @@ public class AccountImpl extends AccountVO implements Account{
 		} catch (Exception e) {
 		
 		}
-		
-		
 	}
 	@Override
 	public void login() {
@@ -110,42 +130,38 @@ public class AccountImpl extends AccountVO implements Account{
 		AccountVO avo = new AccountVO();
 		Iterator ait = aclists.iterator();
 		
-		
 		System.out.print("아이디를 입력하세요 : ");
 		avo.setId(asc.next());
 		System.out.print("패스워드를 입력하세요 : ");
 		avo.setPassword(asc.next());
-		
-		/*
-		 * 아이디 체크 
-		 * 
-		 */
-		String checkid;
-		String checkpw;
-		
 		try{
 			while(ait.hasNext()) {
 				
 				if(avo.getId().equals(null)) {
 					System.out.println("아이디를 입력하세요");
-					continue;
+					
 				}
 				AccountVO asvo = (AccountVO)ait.next();
-				if(asvo.getId() == avo.getId()) {
-					checkid = asvo.getId();
+				if(asvo.getId().equals(avo.getId())) {
+					System.out.println("아이디 체크");
+					if(asvo.getPassword().equals(avo.getPassword())) {
+						System.out.println("패스워드가 확인되었습니다.");
+						System.out.println("로그인 성공 ");
+					}else {
+						System.out.println("패스워드가 틀립니다.");
+					}
 				}
 			}
 		} catch (Exception e) {
-			System.out.println("입력한 아이디가 맞지 않습니다. ");
+			System.out.println("입력한 아이디가 패스워드가 맞지 않습니다. ");
 		}
-		
+			
 	}
-		
-	
 	public void searchAccount() {
 		
 		String searchname = asc.next();
 		System.out.print("찾을 ID를 입력하세요");
+		
 		try {	
 			FileInputStream fis = new FileInputStream(accountfilepath+searchname+".txt");
 			ObjectInputStream ois = new ObjectInputStream(fis);
@@ -157,11 +173,9 @@ public class AccountImpl extends AccountVO implements Account{
 				while(ait.hasNext()) {
 					aclists = (List<AccountVO>)ois.readObject();
 					avo = (AccountVO)ait.next();
-					
 					if(ait.next() == null) {
 						break;
-					}
-					
+					}	
 					System.out.println(avo.toString());
 				}				
 			}catch (Exception e) {
@@ -183,9 +197,75 @@ public class AccountImpl extends AccountVO implements Account{
 			FileOutputStream fos = new FileOutputStream(accountmanagefilepath);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(aclists);
+			oos.close();
+			fos.close();
 		}catch (Exception e) {
 			System.out.println(e.toString());
 		}
 		
-	}	
+	}
+	public boolean OverlapID(AccountVO avo) {
+		
+		Iterator<AccountVO> ait = aclists.iterator();
+		
+		while(ait.hasNext()) {
+			
+			AccountVO checkid = ait.next();
+			
+			if(checkid.getId().equals(avo.getId())) {
+				return false;
+			}
+		}
+		return true;
+	}
+	/* 1. 아이디 길이 체크 
+	 * 2. 영문자 숫자 혼합 아이디 
+	 */
+	public boolean FormatIDCheck(AccountVO avo) {
+		
+		int charcounting=0;
+		int numbercounting=0;
+		
+		// 아이디 길이 체크 
+		if(avo.getId().length() < 8 || avo.getId().length()> 12) {
+			return false;
+		}
+		//영문자 숫자자 혼합인지 체크 
+		for (int i = 0; i < avo.getId().length(); i++) {
+			
+			if((avo.getId().charAt(i) >= 'a' && avo.getId().charAt(i) <= 'z')  || (avo.getId().charAt(i) >= 'A' && avo.getId().charAt(i) <= 'Z') ) {
+				charcounting++;
+			}
+			if((avo.getId().charAt(i) >= '1' && avo.getId().charAt(i) <= '9')) {
+				numbercounting++;
+			}
+		}
+		if(charcounting == avo.getId().length() || numbercounting == avo.getId().length()) {
+			return false;
+		}
+		return true;
+	}
+	/*
+	 * 이메일 형식 체크 완료
+	 */
+	public boolean FormatEmailCheck(AccountVO avo) {
+		
+		String emailpatten = "[\\w..]+@[\\w]+(\\.[\\w+]+)+";
+		
+		if(!Pattern.matches(emailpatten,avo.getEmail())) {
+			return false;
+		}
+		return true;
+	}
+	
+	/*
+	 * 아직 미완성 
+	 */
+	public boolean FormatphoneCheck(AccountVO avo) {
+		
+		String phonepatten = "[\\w]+-[\\w]+-[\\w]";
+		
+		return true;
+	}
+	
 }

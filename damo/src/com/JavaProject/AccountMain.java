@@ -10,15 +10,10 @@ public class AccountMain {
 		
 		
 		Scanner sc = new Scanner(System.in);
-		
-		String str1 ="abc";
-		String str2 = "def";
-		String str3 = str1+str2;
-		System.out.println(str3);
-		
-		
+	
 			
 		int menu =0;
+		
 		System.out.println("로그인 프로그램 테스트 ");
 		
 		while(true) {
