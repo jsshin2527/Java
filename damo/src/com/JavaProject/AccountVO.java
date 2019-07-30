@@ -1,28 +1,38 @@
 package com.JavaProject;
 
+/*
+ *  Class : AccountVO
+ *  AccountVO는 회원정보에 필요한 데이터를 담고 있는 클래스 파일입니다. 
+ *  AccountVO variable 
+ *  id (String) : 회원 id 
+ *  password (String) : 회원 password 
+ *  name (String) : 회원 name
+ *  toString : 회원 정보 출력  
+ */
+
 import java.io.Serializable;
 
 public class AccountVO implements Serializable {
 	
-	
 	private static final long serialVersionUID = 1L;
 	
+	private String id;
+	private String password;
 	private String name;
+
+	/*
 	private int age;
 	private int gender;
 	private String phone;
 	private String email;
-	private String id;
-	private String password;
-
+    */	
+	
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-
-	
 	public String getPassword() {
 		return password;
 	}
@@ -35,7 +45,7 @@ public class AccountVO implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	/*public int getAge() {
 		return age;
 	}
 	public void setAge(int age) {
@@ -58,11 +68,10 @@ public class AccountVO implements Serializable {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}	
-	
+	}	*/
 	@Override
 	public String toString() {
-		String genderformat = "";
+		/*String genderformat = "";
 		
 		if(gender == 1) {
 			genderformat = "남";
@@ -70,10 +79,7 @@ public class AccountVO implements Serializable {
 			genderformat = "여";
 		}
 		String str;
-		
-		str = String.format("%6s %3s %3d %5s %5s %5s",id,name,age,genderformat,phone,email);
-		
-		return str;
-
+		*/
+		return String.format("%6s %3s %3d %5s %5s %5s",id,name,password.substring(3)+"****");
 	}
 }

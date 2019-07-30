@@ -65,10 +65,8 @@ public class ScoreImpl implements Score{
 		vo.setBrith(sc.next());
 		System.out.print("점수을 입력하세요: ");
 		vo.setScore(sc.nextInt());
-		
-		
-		//처음 시작후 데이터 입력시 객체 생성 
 
+		//처음 시작후 데이터 입력시 객체 생성 
 		lists.add(vo);
 		
 		return result;
