@@ -8,8 +8,6 @@ package com.JavaProject;
  *	output() : 회원 가입된 회원 정보를 출력하는 기능한 메소드 
  *  login() : 로그인 기능을 담당하는 메소드: 로그인이 되었을경우 OrderMain으로 메뉴가 넘어갑니다. 
  */
-
-
 import java.io.ObjectInputStream;
 import java.util.List;
 

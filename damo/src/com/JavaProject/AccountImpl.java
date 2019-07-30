@@ -127,15 +127,8 @@ public class AccountImpl implements Account{
 	@Override
 	public void output() {
 		
-		Iterator<AccountVO> ait = aclists.iterator();
-		try {
-			while(ait.hasNext()) {	
-				AccountVO avo = ait.next();
-				System.out.println(avo.toString());	
-			}	
-		} catch (Exception e) {
-		
-		}
+		System.out.println("아직 로그인을 하지 않았습니다");
+		System.out.println("로그인 먼저 하세요 !!!!");
 	}
 	@Override
 	public void login() {
@@ -235,8 +228,11 @@ public class AccountImpl implements Account{
 		if(!logincheck) {
 			System.out.println("아이디와 패스워드가 일치하지않습니다. ");
 			
-		}else {			
-			System.out.println("!!!"+getloginId() +"님 안녕하세요 !!!");
+		}else {	
+			System.out.println();
+			System.out.println("     "+getloginId() +"님 안녕하세요     ");
+			System.out.println("=======================================");
+		
 		}
 		return logincheck;
 	}

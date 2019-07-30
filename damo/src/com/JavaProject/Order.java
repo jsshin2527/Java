@@ -12,6 +12,7 @@ public interface Order {
 	public void cancel(); //주문 취소
 	public void menu(); //메뉴판
 	public void chul();
+	public int price();
 	
 	/*//회원가입 및 로그인 영역
 	public void input();

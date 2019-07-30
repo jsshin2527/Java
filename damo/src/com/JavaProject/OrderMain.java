@@ -11,16 +11,23 @@ public class OrderMain {
 			
 			}
 		public void ordermain(String loginid) {
-			
+			XML_Paring xml = new XML_Paring();
 			Scanner sc = new Scanner(System.in);
 			OrderImpl ob = new OrderImpl();
 			
-			int ch;
+			String[] seoulcoffee = new String[1558];
+			String[] seoulwhere = 	new String[1558];
 			
+			//xml.seoulparing(seoulcoffee, seoulwhere);
+			
+			int ch;
+			//System.out.println(seoulcoffee[3]+seoulwhere[3]);
 			while(true) {
-				do { 
-					System.out.print("1. 주문하기 \n2. 결제하기 ");
-					System.out.print("\n메뉴를 선택하세요  : ");
+				do { 				
+					System.out.println("┌──────┯──────┐");
+					System.out.println("│① 주문하기 │ ② 결제하기│");
+					System.out.println("└──────┻──────┘");
+					System.out.print("메뉴얼을 선택하세요 : ");
 					ch = sc.nextInt();
 					
 				}while(ch<1);
@@ -31,9 +38,7 @@ public class OrderMain {
 					System.out.println();
 					ob.order();break;
 				case 2:
-					break;
-					
-					
+					break;				
 				default:
 					System.exit(0);;
 				}
