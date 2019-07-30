@@ -64,9 +64,9 @@ public class AccountImpl implements Account{
 		AccountVO avo = new AccountVO();
 		System.out.println(loginid);
 	
-		System.out.println("회원 정보를 입력하세요 : ");
-		System.out.println("사용할 ID 를 입력하세요 : ");
-		System.out.println("*영문자 숫자 혼합하여 8~12까지 입력하세요*");
+	//	System.out.println("회원 정보를 입력하세요 : ");
+		System.out.println("사용할 ID 를 입력하세요  ");
+		System.out.println("[영문자 숫자 혼합하여 8~12까지 입력하세요]");
 		System.out.print(" :");
 		avo.setId(asc.next());
 		
@@ -84,26 +84,6 @@ public class AccountImpl implements Account{
 		avo.setPassword(asc.next());
 		System.out.println("이름을 입력하세요 ");
 		System.out.print(" :");
-		/*avo.setName(asc.next());
-		System.out.println("나이를 입력하세요 ");
-		System.out.print(" :");
-		avo.setAge(asc.nextInt());
-		System.out.println("성별을 입력하세요 1. 남자 2 . 여자 ");
-		System.out.print(" :");
-		avo.setGender(asc.nextInt());
-		System.out.println("휴대폰 번호를 입력하세요 (ex 010-1111-2222)");
-		System.out.print(" :");
-		avo.setPhone(asc.next());
-		FormatphoneCheck(avo);
-		System.out.println("이메일을 입력하세요 (ex abc@bcd.com ");
-		System.out.print(" :");
-		avo.setEmail(asc.next());*/
-		
-		/*if(!FormatEmailCheck(avo)) {
-			System.out.println("이메일 형식에 맞지 않습니다.");
-			return;
-		}*/
-		
 		aclists.add(avo);
 		filestore(aclists);
 		
@@ -125,8 +105,7 @@ public class AccountImpl implements Account{
 		}
 	}
 	@Override
-	public void output() {
-		
+	public void output() {	
 		System.out.println("아직 로그인을 하지 않았습니다");
 		System.out.println("로그인 먼저 하세요 !!!!");
 	}
@@ -207,23 +186,7 @@ public class AccountImpl implements Account{
 		}
 		return true;
 	}
-	/*
-	 * 이메일 형식 체크 완료
-	 */
-	/*public boolean FormatEmailCheck(AccountVO avo) {
-		String emailpatten = "[\\w..]+@[\\w]+(\\.[\\w+]+)+";
-		if(!Pattern.matches(emailpatten,avo.getEmail())) {
-			return false;
-		}
-		return true;
-	}	*/
-	/*
-	 * 아직 미완성 
-	 */
-	/*public boolean FormatphoneCheck(AccountVO avo) {
-		String phonepatten = "[\\w]+-[\\w]+-[\\w]";
-		return true;
-	}*/
+	
 	public boolean loginSuccess() {
 		if(!logincheck) {
 			System.out.println("아이디와 패스워드가 일치하지않습니다. ");

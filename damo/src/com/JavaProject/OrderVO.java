@@ -13,37 +13,52 @@ public class OrderVO implements Serializable{
 	private int su; //수량
 	private int price;
 	private int tot;
-	private int priceamea;
-	private int pricecode;
-	private int pricejava;
-	private int pricecake;
+	private int priceamea;//카페라떼
+	private int pricecode;//아메리카노 가격 
+	private int pricejava;//카푸치노
+	private int priceredcake;
+	private int pricetiracake;
+	private String setmakecake;
 	
+	public String getSetmakecake() {
+		return setmakecake;
+	}
+	public void setSetmakecake(String setmakecake) {
+		this.setmakecake = setmakecake;
+	}
 	public int getPriceamea() {
 		return priceamea;
 	}
-	public void setPriceamea(int priceamea) {
-		this.priceamea = 2500*priceamea;
+	public void setPriceamea(int priceamea) {//카페라떼
+		this.priceamea = 3000*priceamea;
 	}
 	public int getPricecode() {
 		return pricecode;
 	}
-	public void setPricecode(int pricecode) {
-		this.pricecode = 3000*pricecode;
+	public void setPricecode(int pricecode) {//아메리카노
+		this.pricecode = 2500*pricecode;
 	}
 	public int getPricejava() {
 		return pricejava;
 	}
-	public int getPricecake() {
-		return pricecake;
+	
+	public void setPricejava(int pricejava) {//카푸치노
+		this.pricejava = 3000*pricejava;
 	}
-	public void setPricecake(int pricecake) {
-		this.pricecake = 3000*pricecake;
+	public int getPriceredcake() {
+		return priceredcake;
 	}
-	public void setPricejava(int pricejava) {
-		this.pricejava = 3500*pricejava;
+	public void setPriceredcake(int priceredcake) {
+		this.priceredcake = 3000*priceredcake;
+	}
+	public int getPricetiracake() {
+		return pricetiracake;
+	}
+	public void setPricetiracake(int pricetiracake) {
+		this.pricetiracake = 5000*pricetiracake;
 	}
 	public int getTot() {	
-		tot += priceamea+pricecode+pricejava+pricecake;
+		tot += priceamea+pricecode+pricejava+priceredcake+pricetiracake;
 		return tot;
 	}
 	public String getDrink() {
@@ -77,32 +92,19 @@ public class OrderVO implements Serializable{
 	public void setPrice(int price) {
 		this.price = price;
 	}	
-	
 	@Override
 	public String toString() { 
 		//만약 케이크면, 케이크는 핫 이런거 없음
-		if(size==null || mode==null) 
-			return String.format("  %s %d %d", drink, su, price);
-		return String.format("  %s %s %s %d %d",drink, size, mode, su);
-	}
-	public String print() {
-		return String.format(" %s %s %s %d %d",drink, size, mode, su);
-	}
-	
-	/*//일단 회원정보? 출력부분
-	public String toStringH() { 
-		String genderformat = "";
-
-		if(gender == 1) {
-			genderformat = "남";
-		}else {
-			genderformat = "여";
+		if(size==null || mode==null) {
+			return String.format("%s %dea ", setmakecake, su);
 		}
-		String str;
-
-		str = String.format("%6s %3s %3d %5s %5s %5s ",id,name,age,genderformat,phone,email);
-
-		return str;
+		if(setmakecake == null) {
+			return String.format("%s %s %s %dea",drink, size, mode, su);	
+		}else if (drink == null) {
+			return String.format("%s %s %s %dea",setmakecake, size, mode, su);
+		}else {
+			return String.format("%s %s %s %s %dea",drink,setmakecake, size, mode, su);
+		}
+		
 	}
-*/
 }

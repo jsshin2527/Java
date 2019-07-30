@@ -1,5 +1,7 @@
 package com.JavaProject;
 
+import javax.swing.plaf.synth.SynthSplitPaneUI;
+
 class MakeCoffee1 extends Thread{
 	@Override
 	public void run() {
@@ -17,7 +19,7 @@ class MakeCoffee1 extends Thread{
 				}
 				for (int j = 0; j <3;j++) {
 					System.out.print("#");
-					sleep(50);
+					sleep(30);
 				}
 				System.out.println();
 			}
@@ -58,7 +60,7 @@ class MakeCoffee1 extends Thread{
 			System.out.print("$");
 			for (int i = 0; i <21;  i++) {
 				System.out.print(" ");
-				sleep(50);
+				sleep(20);
 			}
 			System.out.print("$");
 			System.out.println();
@@ -68,7 +70,7 @@ class MakeCoffee1 extends Thread{
 			System.out.print("$");
 			for (int i = 0; i < 23; i++) {
 				System.out.print(" ");
-				sleep(50);
+				sleep(20);
 			}
 			System.out.print("$");
 			System.out.println();
@@ -123,7 +125,7 @@ class MakeCoffee2 extends Thread{
 					System.out.print("*");
 				}
 				System.out.print("$");	
-				sleep(50);
+				sleep(20);
 				System.out.println();
 			}
 			
@@ -169,7 +171,60 @@ class BodyThread extends Thread{
 	
 	}
 }
-public class CoffeemakeThread {
+
+class MakeCoffee4 extends Thread{
+
+	@Override
+	public void run() 	{
+		
+		System.out.print("\n\n음료 제조중");
+
+		for(int i=0;i<=16;i++) {	
+			System.out.print("*º");
+
+			try {
+
+				Thread.sleep(200);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+}
+
+class Iloveseoul extends Thread{
+	@Override
+	public void run() {
+		
+		try {
+			
+			System.out.println("d888888b   d8b    d8b   .d8888. d88888b db    db  .d88b.  db      ");      
+			sleep(150);
+			System.out.println("  '88'    88  'YP'  88  88'  YP 88'     88    88 .8P  Y8. 88      ");      
+			sleep(150);
+			System.out.println("   88     Y8        8P  `8bo.   88ooooo 88    88 88    88 88      ");     
+			sleep(150);
+			System.out.println("   88      `8b    d8'     `Y8b. 88~~~~~ 88    88 88    88 88      ");    
+			sleep(150);
+			System.out.println("  .88.      `8b  d8'    db   8D 88.     88b  d88 `8b  d8' 88booo. ");
+			sleep(150);
+			System.out.println("Y888888P       YP       `8888Y' Y88888P ~Y8888P'  `Y88P'  Y88888P ");
+			System.out.println();
+			System.out.print("카페 정보를 불러오는중");
+			for (int i = 0; i < 15; i++) {
+				System.out.print(".");
+				sleep(150);
+			}
+			System.out.println();
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+	}
+	
+	
+}
+
+/*public class CoffeemakeThread {
 
 	public static void main(String[] args) {
 		
@@ -194,4 +249,4 @@ public class CoffeemakeThread {
 		
 	}
 
-}
+}*/
