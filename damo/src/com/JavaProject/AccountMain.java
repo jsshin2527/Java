@@ -16,15 +16,15 @@ public class AccountMain {
 		AccountImpl aim = new AccountImpl();
 		OrderMain omain = new OrderMain();
 		Scanner sc = new Scanner(System.in);
+		Cafeicon cafeicon = new Cafeicon();
 		Random rd = new Random();
-		
 		int shopindex;
-		shopindex = rd.nextInt(1557);
-		seoul.start();
-		
+		shopindex = rd.nextInt(1557)+1;
 		try {
+			seoul.start();
 			seoul.join();
-			
+			cafeicon.start();
+			cafeicon.join();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -35,7 +35,7 @@ public class AccountMain {
 		
 		int menu =0;
 
-		System.out.println("카페 ID   : "+seoulid[shopindex]);
+		System.out.println("카페 번호 : "+seoulid[shopindex]);
 		System.out.println("카페 이름 : "+seoulcoffee[shopindex]);
 		System.out.println("카페 위치 : "+seoulwhere[shopindex]);
 		System.out.println();
@@ -46,8 +46,8 @@ public class AccountMain {
 			//System.out. println("1. 회원가입 \n2. 로그인 \n3. 메뉴 \n4. 주문하기 \n5. 종료 \n6. 지금까지 주문한 내용 ");
 			System.out.println();
 			System.out.println("┌──────┯─────┳────┯────┐");
-			System.out.print("│① 회원가입 │② 로그인 │③ 주문 │④ 종료 │");
-			System.out.println("\n└──────┻─────┷────┻────┘");
+			System.out.println("│① 회원가입 │② 로그인 │③ 주문 │④ 종료 │");
+			System.out.println("└──────┻─────┷────┻────┘");
 			System.out.print("\n메뉴얼을 입력하세요 : ");
 			menu = sc.nextInt();
 			switch(menu){
@@ -64,7 +64,7 @@ public class AccountMain {
 					break;
 				}
 			case 3 :
-				aim.output();
+				aim.output();continue;
 			case 4 :
 				System.exit(0);
 			default:

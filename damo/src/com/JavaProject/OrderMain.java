@@ -27,6 +27,7 @@ public class OrderMain {
 			Scanner sc = new Scanner(System.in);
 			OrderImpl ob = new OrderImpl();
 			boolean ordercheck = false;
+			
 			//Random rd = new Random();
 			//int shopindex;
 			//shopindex = rd.nextInt(1557);
@@ -55,6 +56,7 @@ public class OrderMain {
 						System.out.println("주문을 해주세요 ");
 						continue;
 					}
+					
 					ob.MakeCoffee();
 					System.out.println("이용해주셔서 감사합니다.");
 					System.exit(0);

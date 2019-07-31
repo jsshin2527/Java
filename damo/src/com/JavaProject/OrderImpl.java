@@ -67,7 +67,7 @@ public class OrderImpl implements Order {
 			//리턴?은 형식..?
 			System.out.println();
 			System.out.println("┌──────┯──────┳──────┐");
-			System.out.println("│① 추가주문 │② 주문종료 │③ 주문취소 │");
+			System.out.println("│① 추가주문 │② 주문완료 │③ 주문취소 │");
 			System.out.println("└──────┻──────┷──────┘");
 			System.out.print("메뉴얼을 선택해주세요 : ");
 			
@@ -100,7 +100,7 @@ public class OrderImpl implements Order {
 			
 			System.out.println();
 			System.out.println("┌──────┯──────┳──────┐");
-			System.out.println("│① 추가주문 │② 주문종료 │③ 주문취소 │");
+			System.out.println("│① 추가주문 │② 주문완료 │③ 주문취소 │");
 			System.out.println("└──────┻──────┷──────┘");
 			System.out.print("메뉴얼을 선택하세요 : ");
 			System.out.println();
@@ -293,30 +293,80 @@ public class OrderImpl implements Order {
 		//if(케이크) { 받은 price} + if(음료) { 받은 price} => 변수하나를 줘서 출력?
 		}
 		public void MakeCoffee() {
-		MakeCoffee1 mc1= new MakeCoffee1();
-		MakeCoffee2 mc2= new MakeCoffee2();
-		MakeCoffee3 mc3= new MakeCoffee3();
-		MakeCoffee4 mc4= new MakeCoffee4();
-		BodyThread bt1 = new BodyThread();
-
-
-		try {
-			mc4.start();
-			mc4.join();
-
-			mc1.start();
-			mc1.join();
-
-			mc2.start();
-			mc2.join();
-
-			mc3.start();
-			mc3.join();
-
-		} catch (Exception e) {
-			// TODO: handle exception
+			MakeCoffee1 mc1= new MakeCoffee1();
+			MakeCoffee2 mc2= new MakeCoffee2();
+			MakeCoffee3 mc3= new MakeCoffee3();
+			MakeCoffee4 mc4= new MakeCoffee4();
+			BodyThread bt1 = new BodyThread();
+			Cakeicon cakethread = new Cakeicon();
+			
+			Iterator<OrderVO> oit = lists.iterator();
+			
+			boolean countingdrink = false;
+			boolean countingcake = false;
+			
+			while(oit.hasNext()) {
+				
+				OrderVO ov = oit.next();
+				
+				if(ov.getDrink() != null && ov.getSetmakecake() == null) {
+					countingdrink = true;
+				}else if(ov.getSetmakecake() != null && ov.getSetmakecake() != null) {
+					countingcake = true;
+				}else {
+					countingdrink = true;
+					countingcake = true;
+				}
+			}
+			if(countingdrink && !countingcake) {
+				
+				try {
+					mc4.start();
+					mc4.join();
+					
+					mc1.start();
+					mc1.join();
+					
+					mc2.start();
+					mc2.join();
+					
+					mc3.start();
+					mc3.join();
+					
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+				System.out.println("\n\n★★음료가 준비 되었습니다!★★\n\n");
+			}else if(countingcake && !countingdrink) {
+				
+				try {
+					cakethread.start();
+					cakethread.join();
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+				System.out.println("\n\n★★케이크가 준비 되었습니다!★★\n\n");
+			}else {
+				try {
+					mc4.start();
+					mc4.join();
+					
+					mc1.start();
+					mc1.join();
+					
+					mc2.start();
+					mc2.join();
+					
+					mc3.start();
+					mc3.join();
+					
+					cakethread.start();
+					cakethread.join();
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+			System.out.println("\n\n★★음료와 케익이 준비 되었습니다!★★\n\n");
 		}
-		System.out.println("\n\n★★음료가 준비 되었습니다!★★\n\n");
 	}	
 }
 

@@ -198,7 +198,22 @@ class Iloveseoul extends Thread{
 		
 		try {
 			
-			System.out.println("d888888b   d8b    d8b   .d8888. d88888b db    db  .d88b.  db      ");      
+			System.out.println();
+			System.out.println(":::::::::::      :::   :::        ::::::::    ::::::::::   :::    :::    ::::::::    :::       ");        
+			sleep(150);
+			System.out.println("    :+:       :+:   :+:   :+:    :+:    :+:   :+: :+:      :+:    :+:   :+:    :+:   :+:       ");        
+			sleep(150);
+			System.out.println("    +:+      +:+     +     +:+   +:+          +:+          +:+    +:+   +:+    +:+   +:+       ");        
+			sleep(150);
+			System.out.println("    +#+       +#+         +:+    +#++:++#++   +#++:++#     +#+    +:+   +#+    +:+   +#+       ");        
+			sleep(150);
+			System.out.println("    +#+         +#+      +#+            +#+   +#+          +#+    +#+   +#+    +#+   +#+       ");        
+			sleep(150);
+			System.out.println("    #+#           #+#+#+#        #+#    #+#   #+#          #+#    #+#   #+#    #+#   #+#       ");        
+			sleep(150);
+			System.out.println(" ###########        ###           ########    ##########    ########     ########    ##########"); 
+			
+		/*	System.out.println("d888888b   d8b    d8b   .d8888. d88888b db    db  .d88b.  db      ");      
 			sleep(150);
 			System.out.println("  '88'    88  'YP'  88  88'  YP 88'     88    88 .8P  Y8. 88      ");      
 			sleep(150);
@@ -208,13 +223,7 @@ class Iloveseoul extends Thread{
 			sleep(150);
 			System.out.println("  .88.      `8b  d8'    db   8D 88.     88b  d88 `8b  d8' 88booo. ");
 			sleep(150);
-			System.out.println("Y888888P       YP       `8888Y' Y88888P ~Y8888P'  `Y88P'  Y88888P ");
-			System.out.println();
-			System.out.print("카페 정보를 불러오는중");
-			for (int i = 0; i < 15; i++) {
-				System.out.print(".");
-				sleep(150);
-			}
+			System.out.println("Y888888P       YP       `8888Y' Y88888P ~Y8888P'  `Y88P'  Y88888P ");*/
 			System.out.println();
 		} catch (Exception e) {
 			System.out.println(e.toString());
@@ -223,30 +232,105 @@ class Iloveseoul extends Thread{
 	
 	
 }
-
-/*public class CoffeemakeThread {
-
-	public static void main(String[] args) {
-		
-		MakeCoffee1 mc1= new MakeCoffee1();
-		MakeCoffee2 mc2= new MakeCoffee2();
-		MakeCoffee3 mc3= new MakeCoffee3();
-		BodyThread bt1 = new BodyThread();
-		
-		
+class Cafeicon extends Thread{
+	@Override
+	public void run() {
 		try {
-			mc1.start();
-			mc1.join();
 			
-			mc2.start();
-			mc2.join();
-			
-			mc3.start();
-			mc3.join();
+			System.out.println(" ::::::::        :::       ::::::::::   ::::::::::  ");
+			sleep(150);
+			System.out.println(":+:    :+:     :+: :+:     :+:          :+:         ");    
+			sleep(150);
+			System.out.println("+:+           +:+   +:+    +:+          +:+         ");    
+			sleep(150);
+			System.out.println("+#+          +#++:++#++:   :#::+::#     +#++:++#    ");   
+			sleep(150);
+			System.out.println("+#+          +#+     +#+   +#+          +#+         ");  
+			sleep(150);
+			System.out.println("#+#    #+#   #+#     #+#   #+#          #+#         ");  
+			sleep(150);
+			System.out.println(" ########    ###     ###   ###          ##########  ");
+			System.out.println();
+			System.out.println();
+			System.out.print("서울 카페를 탐색합니다. ");
+			for (int i = 0; i < 15; i++) {
+				System.out.print(".");
+				sleep(150);
+			}
+			System.out.println();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 		
 	}
 
-}*/
+}
+class Cakeicon extends Thread{
+	@Override
+	public void run() {
+		
+		try {
+			System.out.println();
+			System.out.println("                     ,~~  .              ");
+			sleep(50);
+			System.out.println("                    .:-~;:-:             ");
+			sleep(50);
+			System.out.println("                   .;-,~~----            ");
+			sleep(50);
+			System.out.println("                  .;--,-::,~~            ");
+			sleep(50);
+			System.out.println("                 .!~----:! -~            ");
+			sleep(50);
+			System.out.println("                 ,*~,,,,~- :~            ");
+			sleep(50);
+			System.out.println("                ,~;--,--~,.!;            ");
+			sleep(50);
+			System.out.println("              .-,,~:~,--:-;;:~.          ");
+			sleep(50);
+			System.out.println("             .~. :..*;:;;*;-!.~,         ");
+			sleep(50);
+			System.out.println("            ,~   ...  ~. ,.,-  --        ");
+			sleep(50);
+			System.out.println("           ,-    .---  , ,--..,,!        ");
+			sleep(50);
+			System.out.println("          ~,      ..,~~-~-,:~,,.:        ");
+			sleep(50);
+			System.out.println("         :             .~:~-::;.~.       ");
+			sleep(50);
+			System.out.println("       .~         .,,-:~-~~,. -.~        ");
+			sleep(50);
+			System.out.println("      ,-       ,---~:~-,,. ..,;.:        ");
+			sleep(50);
+			System.out.println("     --    .~:~-:::-... ..-:~-;.;        ");
+			sleep(50);
+			System.out.println("    --..,::~-~:-..  ...-::-~~~;.;        ");
+			sleep(50);
+			System.out.println("   -:-:::---,. ...---::~--,...; :        ");
+			sleep(50);
+			System.out.println("   ~:~,,,.  ..,~~~::~-,... .,~! ~        ");
+			sleep(50);
+			System.out.println("   .,......~::~~:~..  ...-;:~~* ~        ");
+			sleep(50);
+			System.out.println("   .-,,-~::--~-.....---::~-~-,! -        ");
+			sleep(50);
+			System.out.println("   ,~~::~-,,.  .,~~-~:~-,,. ..*~,        ");
+			sleep(50);
+			System.out.println("   ,:,....  ..~:-~::,..   ,::~.          ");
+			sleep(50);
+			System.out.println("   .. ..,,,~::~~~,....,,-~-              ");
+			sleep(50);
+			System.out.println("   ,----~:~---,. ..----,.                ");
+			sleep(50);
+			System.out.println("   ,::::-,.. ..,:~~..                    ");
+			sleep(50);
+			System.out.println("   ,-..  ...,::-                         ");
+			sleep(50);
+			System.out.println("   .,.,,----,                            ");
+			sleep(50);
+			System.out.println("   .:-,..                                ");
+			System.out.println();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}
