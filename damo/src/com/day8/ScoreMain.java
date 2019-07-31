@@ -4,7 +4,7 @@ public class ScoreMain {
 
 	public static void main(String[] args) {
 		
-		Test4 ob = new Test4();
+		ScoreMethod ob = new ScoreMethod();
 		
 		ob.set();
 		ob.input();

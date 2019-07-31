@@ -19,7 +19,10 @@ public class AccountImpl implements Account{
 
 	List<AccountVO> aclists = null;
 	
+	
+	
 	Scanner asc = new Scanner(System.in);
+	
 	private String accountfilepath = "d:\\project\\"; 
 	private String accountfilename = null;
 	private String accountmanagefilepath = "d:\\project\\account.txt";
@@ -62,9 +65,10 @@ public class AccountImpl implements Account{
 	public void input() {
 		
 		AccountVO avo = new AccountVO();
-		System.out.println(loginid);
+	//	System.out.println(loginid);
 	
 	//	System.out.println("회원 정보를 입력하세요 : ");
+		System.out.println();
 		System.out.println("사용할 ID 를 입력하세요  ");
 		System.out.println("[영문자 숫자 혼합하여 8~12까지 입력하세요]");
 		System.out.print(" :");
@@ -82,8 +86,8 @@ public class AccountImpl implements Account{
 		System.out.println("사용할 패스워드를 입력하세요 ");
 		System.out.print(" :");
 		avo.setPassword(asc.next());
-		System.out.println("이름을 입력하세요 ");
-		System.out.print(" :");
+		//System.out.println("이름을 입력하세요 ");
+		//System.out.print(" :");
 		aclists.add(avo);
 		filestore(aclists);
 		
@@ -98,7 +102,7 @@ public class AccountImpl implements Account{
 			FileOutputStream fos = new FileOutputStream(accountmanagefilepath);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(aclist);
-			System.out.println("파일이 저장되었습니다. ");
+			System.out.println("회원가입이 성공적으로 되었습니다");
 		
 		}catch (Exception e) {
 			System.out.println(e.toString());
@@ -133,14 +137,11 @@ public class AccountImpl implements Account{
 				}
 				AccountVO asvo = (AccountVO)ait.next();
 				if(asvo.getId().equals(avo.getId())) {
-					System.out.println("아이디 체크");
 					if(asvo.getPassword().equals(avo.getPassword())) {
-						System.out.println("패스워드가 확인되었습니다.");
 						loginid = avo.getId();
 						setloginId(loginid);
 						logincheck = true;
 					}else {
-						//System.out.println("패스워드가 틀립니다.");
 						logincheck = false;
 					}
 				}

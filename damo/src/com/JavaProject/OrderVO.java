@@ -13,9 +13,9 @@ public class OrderVO implements Serializable{
 	private int su; //수량
 	private int price;
 	private int tot;
-	private int priceamea;//카페라떼
-	private int pricecode;//아메리카노 가격 
-	private int pricejava;//카푸치노
+	private int priceCafe;//카페라떼
+	private int priceAme;//아메리카노 가격 
+	private int priceCapu;//카푸치노
 	private int priceredcake;
 	private int pricetiracake;
 	private String setmakecake;
@@ -23,28 +23,30 @@ public class OrderVO implements Serializable{
 	public String getSetmakecake() {
 		return setmakecake;
 	}
+	public int getPriceCafe() {
+		return priceCafe;
+	}
+	public void setPriceCafe(int priceCafe) {
+		this.priceCafe = 3000*priceCafe;
+	}
+	public int getPriceAme() {
+		return priceAme;
+	}
+	public void setPriceAme(int priceAme) {
+		this.priceAme = 2500*priceAme;
+	}
+	public int getPriceCapu() {
+		return priceCapu;
+	}
+	public void setPriceCapu(int priceCapu) {
+		this.priceCapu = 3000*priceCapu;
+	}
 	public void setSetmakecake(String setmakecake) {
 		this.setmakecake = setmakecake;
 	}
 	public int getPriceamea() {
-		return priceamea;
-	}
-	public void setPriceamea(int priceamea) {//카페라떼
-		this.priceamea = 3000*priceamea;
-	}
-	public int getPricecode() {
-		return pricecode;
-	}
-	public void setPricecode(int pricecode) {//아메리카노
-		this.pricecode = 2500*pricecode;
-	}
-	public int getPricejava() {
-		return pricejava;
-	}
-	
-	public void setPricejava(int pricejava) {//카푸치노
-		this.pricejava = 3000*pricejava;
-	}
+		return priceCafe;
+	}	
 	public int getPriceredcake() {
 		return priceredcake;
 	}
@@ -58,7 +60,7 @@ public class OrderVO implements Serializable{
 		this.pricetiracake = 5000*pricetiracake;
 	}
 	public int getTot() {	
-		tot += priceamea+pricecode+pricejava+priceredcake+pricetiracake;
+		tot += priceCafe+priceAme+priceCapu+priceredcake+pricetiracake;
 		return tot;
 	}
 	public String getDrink() {

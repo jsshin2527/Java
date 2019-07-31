@@ -1,11 +1,23 @@
 package com.JavaProject;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class AccountMain {
+public class AccountMain implements Serializable{
+		
+
+	private static final long serialVersionUID = 1L;
 
 	public static void main(String[] args) {
+		
+		StoreInfo info = new StoreInfo();
+		
+		List storelist = new ArrayList();
 		
 		String[] seoulcoffee = new String[1558];
 		String[] seoulwhere = new String[1558];
@@ -17,9 +29,11 @@ public class AccountMain {
 		OrderMain omain = new OrderMain();
 		Scanner sc = new Scanner(System.in);
 		Cafeicon cafeicon = new Cafeicon();
+		
 		Random rd = new Random();
 		int shopindex;
 		shopindex = rd.nextInt(1557)+1;
+		
 		try {
 			seoul.start();
 			seoul.join();
@@ -33,8 +47,23 @@ public class AccountMain {
 		seoulwhere = xml.seoulwhereparing(seoulwhere);
 		seoulid  = xml.seoulidparing(seoulid);
 		
+		info.setStoreid(seoulid[shopindex]);
+		info.setStorename(seoulcoffee[shopindex]);
+		info.setStorewhere(seoulwhere[shopindex]);
+		
+		storelist.add(info);
+		try {
+			FileOutputStream fis = new FileOutputStream("d:\\project\\store.txt");
+			ObjectOutputStream ois = new ObjectOutputStream(fis);
+			ois.writeObject(storelist);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
 		int menu =0;
 
+		System.out.println();
 		System.out.println("카페 번호 : "+seoulid[shopindex]);
 		System.out.println("카페 이름 : "+seoulcoffee[shopindex]);
 		System.out.println("카페 위치 : "+seoulwhere[shopindex]);

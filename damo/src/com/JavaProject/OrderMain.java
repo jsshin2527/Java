@@ -39,16 +39,16 @@ public class OrderMain {
 					System.out.println("┌──────┯──────┐");
 					System.out.println("│① 주문하기 │ ② 결제하기│");
 					System.out.println("└──────┻──────┘");
-					System.out.println();
+					//System.out.println();
 					System.out.print("메뉴얼을 선택하세요 : ");
 					ch = sc.nextInt();
-				}while(ch<1);	
+				}while(ch<1);
+				
 				switch (ch) {
 				case 1:
 					ob.menu();
 					ob.order();
 					ordercheck= true;
-					break;
 				case 2:
 					
 					if(!ordercheck) {
@@ -56,7 +56,6 @@ public class OrderMain {
 						System.out.println("주문을 해주세요 ");
 						continue;
 					}
-					
 					ob.MakeCoffee();
 					System.out.println("이용해주셔서 감사합니다.");
 					System.exit(0);
