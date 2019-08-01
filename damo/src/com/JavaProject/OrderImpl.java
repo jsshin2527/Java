@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class OrderImpl implements Order {
-	static int count = 0;
+
 	private static final long serialVersionUID = 1L;
 	
 	List<OrderVO> lists = new ArrayList<OrderVO>();
@@ -23,6 +23,7 @@ public class OrderImpl implements Order {
 	String m3 = "cappuccino"; 	        //카푸치노
 	String m4 = "redvelvetcake"; 		//레드벨벳
 	String m5 = "tiramisu";				//티라미슈
+	
 	List<OrderVO> priceList = new ArrayList<OrderVO>();
 	List storelist = new ArrayList();
 	StoreInfo info = new StoreInfo();
@@ -30,11 +31,11 @@ public class OrderImpl implements Order {
 	String storeid;
 	String storename;
 	String storewhere;
-	
+	int tot = 0;
 	//2.메뉴와 가격 붙이기
 	@Override
 	public void order() {
-		count++;
+		
 		ButtonClass btn = new ButtonClass();
 		OrderVO vo = new OrderVO();
 		System.out.println();
@@ -71,11 +72,9 @@ public class OrderImpl implements Order {
 			}else if(vo.getDrink().equals(m2)) {//카페라떼
 				//vo.setPrice(2500*vo.getSu());
 				vo.setPriceCafe(vo.getSu());
-			}else if(vo.getDrink().equals(m3)) { 
+			}else{ //카푸치노
 				//vo.setPrice(3500*vo.getSu());
 				vo.setPriceCapu(vo.getSu());
-			}else{
-				System.out.println("잘못선택하였습니다");
 			}
 			lists.add(vo);
 			//리턴?은 형식..?
@@ -93,7 +92,7 @@ public class OrderImpl implements Order {
 			else if(resu==2) {
 				chul();
 				payMent();
-				//chul2();
+				chul2();
 			}
 			else if(resu==3) {
 				cancel();
@@ -110,7 +109,7 @@ public class OrderImpl implements Order {
 
 			if(vo.getSetmakecake().equals(m4)) {
 				vo.setPriceredcake(vo.getSu());
-			}else if(vo.getSetmakecake().equals(m5)){
+			}else{
 				vo.setPricetiracake(vo.getSu());
 			}
 			lists.add(vo);
@@ -123,12 +122,12 @@ public class OrderImpl implements Order {
 			int resu = sc.nextInt();
 		
 			if(resu==1) {
-				order();
+				reOrder();
 			}
 			else if(resu==2) {
 				chul();
-				payMent();
-				//chul2();
+				payMent();			
+				chul2();
 			}
 			else if(resu==3) {
 				cancel();
@@ -169,14 +168,11 @@ public class OrderImpl implements Order {
 			}else if(vo.getDrink().equals(m2)) {
 				//vo.setPrice(2500*vo.getSu());
 				vo.setPriceCafe(vo.getSu());
-			}else if(vo.getDrink().equals(m3)){ 
+			}else{ 
 				//vo.setPrice(3500*vo.getSu());
 				vo.setPriceCapu(vo.getSu());
 			}
 			lists.add(vo);
-			for(OrderVO v : lists) {
-				System.out.println("total: "+v.getTot());
-			}
 		}else if(o==2) {
 			vo.setSetmakecake(btn.cake());
 			System.out.println();
@@ -184,7 +180,7 @@ public class OrderImpl implements Order {
 			vo.setSu(sc.nextInt());
 			if(vo.getSetmakecake().equals(m4)) {
 				vo.setPriceredcake(vo.getSu());
-			}else if(vo.getSetmakecake().equals(m5)) {
+			}else{
 				vo.setPricetiracake(vo.getSu());
 			}
 			lists.add(vo);
@@ -209,7 +205,7 @@ public class OrderImpl implements Order {
 			else if(resu==2) {
 				chul();
 				payMent();
-				//chul2();
+				chul2();
 				break;
 			}
 			else if(resu==3){
@@ -221,39 +217,6 @@ public class OrderImpl implements Order {
 		}
 	}
 
-
-	@Override
-	public void keep() {
-		System.out.println("이대로 주문하시겠습니까?");
-		//배열에 들어간 내용 출력
-		Iterator<OrderVO> ov = lists.iterator();
-		while(ov.hasNext()) {
-			OrderVO vo = ov.next();
-			System.out.println("┌------------------------------┐");
-			System.out.println("    "+vo.toString());
-			System.out.println("└------------------------------┘");	
-		}
-		while(true) {
-			System.out.println();
-			System.out.println("입력한 정보가 맞으신가요 ? ");
-			System.out.println();
-			System.out.println("┌───┯─────┐");
-			System.out.println("│① 예 │② 아니요 │");
-			System.out.println("└───┴─────┘");
-			System.out.print(": ");
-			int ssu = sc.nextInt();
-			if(ssu==1) {
-				//출력하는 부분으로 넘어감
-				break;
-			}
-			else if(ssu==2) {
-				order();
-				break;
-			}else {
-				System.out.println("잘못선택하였습니다");
-			}		
-		}
-	}
 	public void payMent() {
 
 		while(true) {
@@ -296,7 +259,7 @@ public class OrderImpl implements Order {
 		System.out.println(" │                                                                    │");
 		System.out.println(" │                                                                    │");
 		System.out.println(" │    【Coffee】           Americano     : 2,500원                    │");
-		System.out.println(" │                                                                    │"); //ㅂ+한자
+		System.out.println(" │                                                                    │"); 
 		System.out.println(" │                                                                    │");
 		System.out.println(" │                         Caffe Late    : 3,000원                    │");
 		System.out.println(" │                                                                    │");
@@ -315,33 +278,27 @@ public class OrderImpl implements Order {
 
 	@Override
 	public void chul() {
-		count++;
+		
 		//영수증 출력?
 		//price끼리 더하기? 각각 메뉴일때 셋팅한 int 값을 더하기
 		//수량에 따라서 가격변동
 		//리스트 그대로 출력하기!!
 		//배열에 들어간 내용 출력
+		//int tot = 0;
 		Iterator<OrderVO> ov = lists.iterator();
-		int tot = 0;
 
 		System.out.println();
 		System.out.println("===========================================");
 		System.out.println("               결제 내역 확인               ");
 		System.out.println("-------------------------------------------");
 		System.out.println();
-	/*	for(OrderVO v : lists) {
-			System.out.println(v.toString());
-			tot += v.getTot()/count;
-		}*/
+		
 		while(ov.hasNext()) {
 			OrderVO vo = ov.next();	
 			System.out.println(vo.toString());
 			tot += vo.getTot();
 			System.out.println();
 		}
-		/*OrderVO vo = ov.next();	
-		System.out.println(vo.toString());
-		tot += vo.getTot();*/
 		System.out.println();
 		System.out.println("===========================================");
 		System.out.println("총 합 : "+tot);
@@ -351,18 +308,8 @@ public class OrderImpl implements Order {
 		//if(케이크) { 받은 price} + if(음료) { 받은 price} => 변수하나를 줘서 출력?
 	}
 	public void chul2() {
-		count++;
-		//영수증 출력?
-		//price끼리 더하기? 각각 메뉴일때 셋팅한 int 값을 더하기
-		//수량에 따라서 가격변동
-		//리스트 그대로 출력하기!!
-		//배열에 들어간 내용 출력
 		Iterator<OrderVO> ov = lists.iterator();
-		int tot = 0;
-		/*
-		 * 가게이름 
-		 * 가게 주소 
-		 */
+
 		storeid=readstoreid(storeid);
 		storename=readstorename(storename);
 		storewhere=readstorewhere(storewhere);
@@ -380,31 +327,31 @@ public class OrderImpl implements Order {
 		System.out.printf( "  %1$tF                   %1$tT \n", Calendar.getInstance());
 		System.out.println("-------------------------------------------");
 		System.out.println();
+		
 		while(ov.hasNext()) {
 			OrderVO vo = ov.next();	
-			System.out.println(vo.toString());
-			System.out.println("tot: "+vo.getTot());
-			tot = vo.getTot();
-			System.out.println();
+			
+			System.out.print(vo.toString());
+			//if(vo.getDrink().equals(m1)) {
+			/*	System.out.println("............ "+vo.getPriceAme());
+			}else if(vo.getDrink().equals(m2)) {
+				System.out.println("............ "+vo.getPriceCafe());
+			}else if(vo.getDrink().equals(m3)) {
+				System.out.println("............ "+vo.getPriceCapu());
+			}else if(vo.getDrink().equals(m4)) {
+				System.out.println("............ "+vo.getPriceredcake());
+			}else {
+				System.out.println("............ "+vo.getPricetiracake());
+			}
+*/			System.out.println();
 		}
-		/*OrderVO vo = new OrderVO();
-		
-		vo=ov.next();	
-		
-		System.out.println(vo.toString());
-		System.out.println("tot: "+vo.getTot());
-		tot = vo.getTot();
-		System.out.println();*/
-		/*for(OrderVO v : lists) {
-			System.out.println(v.toString());
-			tot += v.getTot()/count;
-		}*/
 		System.out.println("===========================================");
 		System.out.println("총 구매금액 : "+tot);
 		System.out.println("===========================================");
 		System.out.println("	이용해주셔서 감사합니다        		   ");
 		System.out.println("===========================================");
 		System.out.println();
+		
 		//가격 출력 부분
 		//if(케이크) { 받은 price} + if(음료) { 받은 price} => 변수하나를 줘서 출력?
 	}
@@ -564,7 +511,7 @@ class ButtonClass {
 				coffee = "americano";
 				break;
 			}else if(coffee.equals(menu[1])) {
-				coffee = "caffelate";
+				coffee = "caffeaate";
 				break;
 			}else if(coffee.equals(menu[2])) {
 				coffee = "cappuccino ";

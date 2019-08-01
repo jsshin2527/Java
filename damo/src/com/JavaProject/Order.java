@@ -8,7 +8,6 @@ public interface Order {
 	public void order(); //주문
 	//재주문 및 메뉴
 	public void reOrder(); //다시주문
-	public void keep(); //주문하기
 	public void cancel(); //주문 취소
 	public void menu(); //메뉴판
 	public void chul();

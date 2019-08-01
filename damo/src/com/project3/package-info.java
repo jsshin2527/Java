@@ -5,4 +5,4 @@
  * @author stu
  *
  */
-package JavaProjectTest;
+package com.project3;

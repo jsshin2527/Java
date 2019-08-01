@@ -10,6 +10,8 @@ public class OrderVO implements Serializable{
 	private String drink; //음료 선택
 	private String size; //사이즈
 	private String mode; //HOT/ICE
+	private String setmakecake;
+	
 	private int su; //수량
 	private int price;
 	private int tot;
@@ -18,7 +20,7 @@ public class OrderVO implements Serializable{
 	private int priceCapu;//카푸치노
 	private int priceredcake;
 	private int pricetiracake;
-	private String setmakecake;
+	
 	
 	public String getSetmakecake() {
 		return setmakecake;
@@ -87,7 +89,6 @@ public class OrderVO implements Serializable{
 	public void setSu(int su) {
 		this.su = su;
 	}
-	
 	public int getPrice() {
 		return price;
 	}

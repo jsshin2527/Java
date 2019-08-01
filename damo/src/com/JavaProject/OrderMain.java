@@ -27,11 +27,6 @@ public class OrderMain {
 			Scanner sc = new Scanner(System.in);
 			OrderImpl ob = new OrderImpl();
 			boolean ordercheck = false;
-			
-			//Random rd = new Random();
-			//int shopindex;
-			//shopindex = rd.nextInt(1557);
-			
 			int ch;
 			
 			while(true) {
@@ -49,8 +44,7 @@ public class OrderMain {
 					ob.menu();
 					ob.order();
 					ordercheck= true;
-				case 2:
-					
+				case 2:		
 					if(!ordercheck) {
 						System.out.println("아직 주문을 하지 않았습니다 ");
 						System.out.println("주문을 해주세요 ");
