@@ -48,10 +48,9 @@ public class XML_Define {
 		 System.out.println(((Element)book1).getAttribute("kind"));
 		 
 		 Node title = book1.getFirstChild();
+		 //System.out.println("tset123 "+title.getNodeValue());
+		 //System.out.println(((Element)title).getNodeValue());
 		 Node title1 = title.getNextSibling();
-		 
-		 System.out.println(title1.getNodeName());
-		 
 		 Node title1_1 = title1.getFirstChild();
 		 System.out.println(title1_1.getNodeValue());
 		 
@@ -59,7 +58,7 @@ public class XML_Define {
 		 
 		 NodeList books = root.getElementsByTagName("book");
 		 
-		 String  str = "";
+		 String str = "";
 		 String out = "";
 		 for (int i = 0; i < books.getLength(); i++) {
 			 Node book = books.item(i);	 
@@ -81,7 +80,6 @@ public class XML_Define {
 			 out += "\n";
 			 
 		 }
-		 System.out.println(out);
-		 
+		 System.out.println(out);	 
 	}
 }

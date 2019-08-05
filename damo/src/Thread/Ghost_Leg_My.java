@@ -24,7 +24,6 @@ import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import JavaBasic_minProject.RandomNumberGame;
 
 class MyThreadLeg extends Thread{
 	
